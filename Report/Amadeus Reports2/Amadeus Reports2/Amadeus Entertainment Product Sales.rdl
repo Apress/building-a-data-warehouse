@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DDS">
+      <DataSourceReference>DDS</DataSourceReference>
+      <rd:DataSourceID>581b0ccd-ba8c-41a7-a0f6-0e865dbb6bed</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <ReportParameters>
+    <ReportParameter Name="pYear">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=year(now)</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Year</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsYear</DataSetName>
+          <ValueField>year</ValueField>
+          <LabelField>year</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="pQuarter">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Q1</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Quarter</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsQuarter</DataSetName>
+          <ValueField>quarter</ValueField>
+          <LabelField>quarter</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="pDivision">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Division</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsDivision</DataSetName>
+          <ValueField>division</ValueField>
+          <LabelField>division</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Tahoma</FontFamily>
+          <FontWeight>700</FontWeight>
+          <FontSize>20pt</FontSize>
+          <Color>SteelBlue</Color>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.91429cm</Height>
+        <Value>Amadeus Entertainment Product Sales</Value>
+      </Textbox>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>1.75cm</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>2.75cm</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="textbox3">
+                  <rd:DefaultName>textbox3</rd:DefaultName>
+                  <ZIndex>4</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontWeight>700</FontWeight>
+                    <BorderColor>
+                      <Default>LightGrey</Default>
+                    </BorderColor>
+                    <BackgroundColor>#6e9eca</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!product_category.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="textbox5">
+                    <rd:DefaultName>textbox5</rd:DefaultName>
+                    <ZIndex>1</ZIndex>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontWeight>700</FontWeight>
+                      <BorderColor>
+                        <Default>LightGrey</Default>
+                      </BorderColor>
+                      <BackgroundColor>#6e9eca</BackgroundColor>
+                      <Color>White</Color>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>Total</Value>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!product_category.Value</SortExpression>
+                  <Direction>Descending</Direction>
+                </SortBy>
+              </Sorting>
+              <Grouping Name="ProductCategory">
+                <Filters>
+                  <Filter>
+                    <Operator>NotEqual</Operator>
+                    <FilterValues>
+                      <FilterValue>Unknown</FilterValue>
+                    </FilterValues>
+                    <FilterExpression>=Fields!product_category.Value</FilterExpression>
+                  </Filter>
+                </Filters>
+                <GroupExpressions>
+                  <GroupExpression>=Fields!product_category.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+          <RowGrouping>
+            <Width>4cm</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="product_type">
+                  <rd:DefaultName>product_type</rd:DefaultName>
+                  <ZIndex>3</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontWeight>700</FontWeight>
+                    <BorderColor>
+                      <Default>LightGrey</Default>
+                    </BorderColor>
+                    <BackgroundColor>#6e9eca</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!product_type.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="textbox6">
+                    <rd:DefaultName>textbox6</rd:DefaultName>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontWeight>700</FontWeight>
+                      <BorderColor>
+                        <Default>LightGrey</Default>
+                      </BorderColor>
+                      <BackgroundColor>#6e9eca</BackgroundColor>
+                      <Color>White</Color>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>Total</Value>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!product_type.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <Grouping Name="matrix1_product_type">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!product_type.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <DynamicColumns>
+              <ReportItems>
+                <Textbox Name="week_number">
+                  <rd:DefaultName>week_number</rd:DefaultName>
+                  <ZIndex>5</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontWeight>700</FontWeight>
+                    <BorderColor>
+                      <Default>LightGrey</Default>
+                    </BorderColor>
+                    <BackgroundColor>#6e9eca</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!week_number.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!week_number.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <Grouping Name="matrix1_week_number">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!week_number.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicColumns>
+            <Height>0.53333cm</Height>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <DataSetName>DDS</DataSetName>
+        <Top>0.91429cm</Top>
+        <Width>8.5cm</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox4">
+              <rd:DefaultName>textbox4</rd:DefaultName>
+              <ZIndex>6</ZIndex>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingBottom>2pt</PaddingBottom>
+                <BorderColor>
+                  <Default>LightGrey</Default>
+                </BorderColor>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+              </Style>
+              <CanGrow>true</CanGrow>
+              <Value>Product by Week</Value>
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.53333cm</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox2">
+                    <rd:DefaultName>textbox2</rd:DefaultName>
+                    <ZIndex>2</ZIndex>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontFamily>Tahoma</FontFamily>
+                      <Format>N</Format>
+                      <BorderColor>
+                        <Default>LightGrey</Default>
+                      </BorderColor>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=Sum(Fields!Sales_Value.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+    </ReportItems>
+    <Height>2.51428cm</Height>
+  </Body>
+  <rd:ReportID>c1f5b456-768f-4ae4-8f81-94a4339baae6</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="DDS">
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>SELECT dim_date.week_number, dim_product.product_type, 
+SUM(fact_product_sales.sales_value) AS [Sales Value], 
+dim_product.product_category
+FROM dim_date 
+INNER JOIN fact_product_sales 
+ON dim_date.date_key = fact_product_sales.sales_date_key 
+INNER JOIN dim_product 
+ON fact_product_sales.product_key = dim_product.product_key 
+INNER JOIN dim_store 
+ON fact_product_sales.store_key = dim_store.store_key
+WHERE dim_date.year = @pYear
+  AND dim_date.quarter = @pQuarter
+  AND (dim_store.division = @pDivision or @pDivision = 'All')
+GROUP BY dim_product.product_type, dim_date.week_number,
+dim_product.product_category</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@pYear">
+            <Value>=Parameters!pYear.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@pQuarter">
+            <Value>=Parameters!pQuarter.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@pDivision">
+            <Value>=Parameters!pDivision.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <DataSourceName>DDS</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="week_number">
+          <rd:TypeName>System.Byte</rd:TypeName>
+          <DataField>week_number</DataField>
+        </Field>
+        <Field Name="product_type">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>product_type</DataField>
+        </Field>
+        <Field Name="Sales_Value">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Sales Value</DataField>
+        </Field>
+        <Field Name="product_category">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>product_category</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="dsYear">
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>select distinct d.year 
+from fact_product_sales f
+inner join dim_date d
+on f.sales_date_key = d.date_key</CommandText>
+        <DataSourceName>DDS</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="year">
+          <rd:TypeName>System.Int16</rd:TypeName>
+          <DataField>year</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="dsQuarter">
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>select distinct d.quarter
+from fact_product_sales f
+inner join dim_date d
+on f.sales_date_key = d.date_key
+where d.year = @pYear</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@pYear">
+            <Value>=Parameters!pYear.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <DataSourceName>DDS</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="quarter">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>quarter</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="dsDivision">
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>select distinct s.division
+from fact_product_sales f
+inner join dim_store s
+on f.store_key = s.store_key
+union
+select 'All' as division</CommandText>
+        <DataSourceName>DDS</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="division">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>division</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>14.75cm</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

@@ -1,0 +1,13 @@
+These 4 zip files contains the material to build the data warehouse for the Amadeus Entertainment case study.
+
+1. source_code.zip contains these folders:
+- Scripts: contains the table creation scripts to build the source system and the data warehouse databases as explained in chapter 6.
+- ETL: contains SSIS packages to import data into the data warehouse. Chapter 7 and 8 explain how to build these packages.
+- Report: contains SSRS reports that we build in chapter 11.
+- Cubes: contains SSAS projects that we build in chapter 12.
+
+2. source_system.zip contains the source system databases (Jade, Jupiter, WebTower) required to build the data warehouse for the case study in chapter 7 and 8.
+
+3. data.zip contains the external data (country.dat) used in chapter 7 and the backup of Analysis Services cube (Amadeus Entertainment.abf) used for reporting in chapter 11. 
+
+4. dds.zip contains the backup of DDS database used for reporting, OLAP, BI and data mining in chapter 11, 12 and 13.

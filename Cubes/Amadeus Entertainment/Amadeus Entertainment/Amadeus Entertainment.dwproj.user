@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>DDS</Id>
+            <Name>DDS</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA045kkKm4Nk+RGHddbXjq4wAAAAAIAAAARABEAFMAAAADZgAAqAAAABAAAACSMv2weRAVzzAv1ZVBx8xOAAAAAASAAACgAAAAEAAAAF6bSjTyFvn6isbt2ZKLbUQIAAAARP3AJ9V2w9sUAAAA9OSicdCnCpj+Qi7gGSKnBzDES9s=</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>DDS</Id>
+            <Name>DDS</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA045kkKm4Nk+RGHddbXjq4wAAAAAIAAAARABEAFMAAAADZgAAqAAAABAAAAD8GBkem03LIqlYbn31O4lJAAAAAASAAACgAAAAEAAAAHgZquijb6C+86douqyuwrYIAAAAeMzP8pVG9agUAAAA3WC4efQOa+meFmo/uBuxAYU3Zkc=</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>VIVA2</TargetServer>
+        <TargetDatabase>Amadeus Entertainment</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>

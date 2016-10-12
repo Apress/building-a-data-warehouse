@@ -1,0 +1,856 @@
+<?xml version="1.0"?><DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts" DTS:ExecutableType="MSDTS.Package.1"><DTS:Property DTS:Name="PackageFormatVersion">2</DTS:Property><DTS:Property DTS:Name="VersionComments"></DTS:Property><DTS:Property DTS:Name="CreatorName">VIVA2\Vinival</DTS:Property><DTS:Property DTS:Name="CreatorComputerName">VIVA2</DTS:Property><DTS:Property DTS:Name="CreationDate" DTS:DataType="7">4/20/2007 7:09:20 AM</DTS:Property><DTS:Property DTS:Name="PackageType">5</DTS:Property><DTS:Property DTS:Name="ProtectionLevel">1</DTS:Property><DTS:Property DTS:Name="MaxConcurrentExecutables">-1</DTS:Property><DTS:Property DTS:Name="PackagePriorityClass">0</DTS:Property><DTS:Property DTS:Name="VersionMajor">1</DTS:Property><DTS:Property DTS:Name="VersionMinor">0</DTS:Property><DTS:Property DTS:Name="VersionBuild">8</DTS:Property><DTS:Property DTS:Name="VersionGUID">{E2158FF5-593B-4C20-A709-D4B11797860D}</DTS:Property><DTS:Property DTS:Name="EnableConfig">0</DTS:Property><DTS:Property DTS:Name="CheckpointFileName"></DTS:Property><DTS:Property DTS:Name="SaveCheckpoints">0</DTS:Property><DTS:Property DTS:Name="CheckpointUsage">0</DTS:Property><DTS:Property DTS:Name="SuppressConfigurationWarnings">0</DTS:Property>
+<DTS:ConnectionManager><DTS:Property DTS:Name="DelayValidation">0</DTS:Property><DTS:Property DTS:Name="ObjectName">viva2.DDS.ETL</DTS:Property><DTS:Property DTS:Name="DTSID">{C88FC50C-E3EE-4A90-BBAC-11D67C6FA428}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName">OLEDB</DTS:Property><DTS:ObjectData><DTS:ConnectionManager><DTS:Property DTS:Name="Retain">0</DTS:Property><DTS:Password DTS:Name="Password" Sensitive="1" Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA045kkKm4Nk+RGHddbXjq4wAAAAAIAAAARABUAFMAAAADZgAAqAAAABAAAAB/YXLjVtXWw0hrAsries/uAAAAAASAAACgAAAAEAAAAM/H0g3nlE7k4Wns5jd/cuoIAAAAnrGfLUpehXMUAAAAbkfK1L5lcLQb8mdTE+fn9WO44so</DTS:Password><DTS:Property DTS:Name="ConnectionString">Data Source=viva2;User ID=ETL;Initial Catalog=DDS;Provider=SQLNCLI.1;Persist Security Info=True;Auto Translate=False;</DTS:Property></DTS:ConnectionManager></DTS:ObjectData></DTS:ConnectionManager>
+<DTS:ConnectionManager><DTS:Property DTS:Name="DelayValidation">0</DTS:Property><DTS:Property DTS:Name="ObjectName">viva2.Meta.ETL</DTS:Property><DTS:Property DTS:Name="DTSID">{06A7CB12-8128-4EFE-B427-AD787EFD9E69}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName">OLEDB</DTS:Property><DTS:ObjectData><DTS:ConnectionManager><DTS:Property DTS:Name="Retain">0</DTS:Property><DTS:Password DTS:Name="Password" Sensitive="1" Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA045kkKm4Nk+RGHddbXjq4wAAAAAIAAAARABUAFMAAAADZgAAqAAAABAAAABkZBqK7+m3BxSCBgL232PBAAAAAASAAACgAAAAEAAAALl5mstVUzRBXnmGyktFOnIIAAAAs5jyOWrcQnwUAAAAeVTyELxxJTcWor0PJNWPHoLFm2g</DTS:Password><DTS:Property DTS:Name="ConnectionString">Data Source=viva2;User ID=ETL;Initial Catalog=Meta;Provider=SQLNCLI.1;Persist Security Info=True;Auto Translate=False;</DTS:Property></DTS:ConnectionManager></DTS:ObjectData></DTS:ConnectionManager>
+<DTS:ConnectionManager><DTS:Property DTS:Name="DelayValidation">0</DTS:Property><DTS:Property DTS:Name="ObjectName">viva2.NDS.ETL</DTS:Property><DTS:Property DTS:Name="DTSID">{724B07C0-2181-4E92-A261-5FF6A4D0E20B}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName">OLEDB</DTS:Property><DTS:ObjectData><DTS:ConnectionManager><DTS:Property DTS:Name="Retain">0</DTS:Property><DTS:Password DTS:Name="Password" Sensitive="1" Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA045kkKm4Nk+RGHddbXjq4wAAAAAIAAAARABUAFMAAAADZgAAqAAAABAAAADrR51BjdipSdLFoP7varoKAAAAAASAAACgAAAAEAAAAMDm+u0Dsj+z3CTxyRyoUKYIAAAAzKLazw3SDqcUAAAAXMiS3pi663z6dC32JakmqT6hU0M</DTS:Password><DTS:Property DTS:Name="ConnectionString">Data Source=viva2;User ID=ETL;Initial Catalog=NDS;Provider=SQLNCLI.1;Persist Security Info=True;Auto Translate=False;</DTS:Property></DTS:ConnectionManager></DTS:ObjectData></DTS:ConnectionManager>
+<DTS:PackageVariable><DTS:Property DTS:Name="PackageVariableValue" DTS:DataType="8">&lt;Package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:DtsControlFlowDiagram&gt;&lt;dwd:BoundingLeft&gt;-1777&lt;/dwd:BoundingLeft&gt;&lt;dwd:BoundingTop&gt;-500&lt;/dwd:BoundingTop&gt;&lt;dwd:Layout&gt;&lt;dds&gt;
+  &lt;diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="Microsoft.DataWarehouse.Layout.GraphLayout" defaultlineroute="Microsoft.DataWarehouse.Layout.GraphLayout" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2777" scrolltop="-1500" gridx="150" gridy="150" marginx="1000" marginy="1000" zoom="100" x="22251" y="13335" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="1" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}"&gt;
+    &lt;font&gt;
+      &lt;ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" /&gt;
+    &lt;/font&gt;
+    &lt;mouseicon&gt;
+      &lt;ddsxmlobjectstreamwrapper binary="6c74000000000000" /&gt;
+    &lt;/mouseicon&gt;
+  &lt;/diagram&gt;
+  &lt;layoutmanager&gt;
+    &lt;ddsxmlobj /&gt;
+  &lt;/layoutmanager&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Data Flow Task" left="-1777" top="3828" logicalid="8" controlid="1" masterid="0" hint1="0" hint2="0" width="3598" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000800000e0e00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Execute SQL Task" left="-1777" top="-500" logicalid="9" controlid="2" masterid="0" hint1="0" hint2="0" width="3598" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000800000e0e00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{00B1166C-EB5E-4BE0-BE6A-2A23CE2A45D0}" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Execute SQL Task" left="-1777" top="1664" logicalid="10" controlid="3" masterid="0" hint1="0" hint2="0" width="3598" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000800000e0e00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{CE8168D1-4A6D-49A0-995C-D25BE0578E2F}" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Polyline" left="-377" top="265" logicalid="11" controlid="4" masterid="0" hint1="0" hint2="0" width="799" height="1899" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{2FCC1EE8-0EA5-4AA8-9135-6A78F77358B2}" vartype="8" /&gt;
+        &lt;property name="Virtual" value="0" vartype="11" /&gt;
+        &lt;property name="VisibleAP" value="0" vartype="3" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout" sourceid="2" destid="3" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;
+      &lt;point x="22" y="664" /&gt;
+      &lt;point x="22" y="1664" /&gt;
+    &lt;/connector&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Polyline" left="-377" top="2429" logicalid="12" controlid="5" masterid="0" hint1="0" hint2="0" width="799" height="1899" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{BD7CC692-9FFC-4732-9F9A-4AB8A9EEF126}" vartype="8" /&gt;
+        &lt;property name="Virtual" value="0" vartype="11" /&gt;
+        &lt;property name="VisibleAP" value="0" vartype="3" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout" sourceid="3" destid="1" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;
+      &lt;point x="22" y="2828" /&gt;
+      &lt;point x="22" y="3828" /&gt;
+    &lt;/connector&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Execute SQL Task" left="-1777" top="5992" logicalid="13" controlid="6" masterid="0" hint1="0" hint2="0" width="3598" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000800000e0e00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{7E8ED6A6-5186-4F64-9357-877CCF463A37}" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Polyline" left="-377" top="4593" logicalid="14" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="1899" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{8DDCEDDF-B8F1-4B15-9E57-74BDA8D7EC9F}" vartype="8" /&gt;
+        &lt;property name="Virtual" value="0" vartype="11" /&gt;
+        &lt;property name="VisibleAP" value="0" vartype="3" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout" sourceid="1" destid="6" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;
+      &lt;point x="22" y="4992" /&gt;
+      &lt;point x="22" y="5992" /&gt;
+    &lt;/connector&gt;
+  &lt;/ddscontrol&gt;
+&lt;/dds&gt;&lt;/dwd:Layout&gt;&lt;dwd:PersistedViewPortLeft&gt;-2777&lt;/dwd:PersistedViewPortLeft&gt;&lt;dwd:PersistedViewPortTop&gt;-1500&lt;/dwd:PersistedViewPortTop&gt;&lt;/dwd:DtsControlFlowDiagram&gt;&lt;/Package&gt;</DTS:Property><DTS:Property DTS:Name="Namespace">dts-designer-1.0</DTS:Property><DTS:Property DTS:Name="ObjectName">{784FC651-713F-425D-BFC7-FAC87B05AFBB}</DTS:Property><DTS:Property DTS:Name="DTSID">{C614D008-8AAE-4E28-8D2B-E54710B8E9FE}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PackageVariable>
+<DTS:PackageVariable><DTS:Property DTS:Name="PackageVariableValue" DTS:DataType="8">&lt;TaskHost xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:DtsDataFlowDiagram&gt;&lt;dwd:BoundingLeft&gt;-14649&lt;/dwd:BoundingLeft&gt;&lt;dwd:BoundingTop&gt;-2117&lt;/dwd:BoundingTop&gt;&lt;dwd:Layout&gt;&lt;dds&gt;
+  &lt;diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="Microsoft.DataWarehouse.Layout.GraphLayout" defaultlineroute="Microsoft.DataWarehouse.Layout.GraphLayout" version="7" nextobject="29" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-13105" scrolltop="-3117" gridx="150" gridy="150" marginx="1000" marginy="1000" zoom="100" x="22251" y="12409" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="1" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="0" backpictureclsid="{00000000-0000-0000-0000-000000000000}"&gt;
+    &lt;font&gt;
+      &lt;ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" /&gt;
+    &lt;/font&gt;
+    &lt;mouseicon&gt;
+      &lt;ddsxmlobjectstreamwrapper binary="6c74000000000000" /&gt;
+    &lt;/mouseicon&gt;
+  &lt;/diagram&gt;
+  &lt;layoutmanager&gt;
+    &lt;ddsxmlobj /&gt;
+  &lt;/layoutmanager&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="OLE DB Source" left="-12600" top="-1455" logicalid="12" controlid="1" masterid="0" hint1="0" hint2="0" width="3598" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000800000e0e00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}/components/1" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Updates a slowly changing dimension." left="-12600" top="2873" logicalid="13" controlid="2" masterid="0" hint1="0" hint2="0" width="3598" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000800000e0e00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}/components/1001" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Updates column values using expressions" left="-12600" top="709" logicalid="14" controlid="3" masterid="0" hint1="0" hint2="0" width="3598" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000800000e0e00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}/components/1122" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Polyline" left="-11200" top="1474" logicalid="15" controlid="4" masterid="0" hint1="0" hint2="0" width="799" height="1899" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}/paths/1129" vartype="8" /&gt;
+        &lt;property name="Virtual" value="0" vartype="11" /&gt;
+        &lt;property name="VisibleAP" value="0" vartype="3" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout" sourceid="3" destid="2" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;
+      &lt;point x="-10801" y="1873" /&gt;
+      &lt;point x="-10801" y="2873" /&gt;
+    &lt;/connector&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Polyline" left="-11200" top="-690" logicalid="16" controlid="5" masterid="0" hint1="0" hint2="0" width="799" height="1899" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}/paths/1409" vartype="8" /&gt;
+        &lt;property name="Virtual" value="0" vartype="11" /&gt;
+        &lt;property name="VisibleAP" value="0" vartype="3" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout" sourceid="1" destid="3" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;
+      &lt;point x="-10801" y="-291" /&gt;
+      &lt;point x="-10801" y="709" /&gt;
+    &lt;/connector&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="OLE DB Destination" left="-14649" top="5037" logicalid="17" controlid="6" masterid="0" hint1="0" hint2="0" width="3598" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000800000e0e00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}/components/1531" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Polyline" left="-13249" top="3638" logicalid="18" controlid="7" masterid="0" hint1="0" hint2="0" width="2298" height="1899" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1"&gt;
+          &lt;adornment percentpos="22.2488995598239" controlid="14" width="1673" height="344" side="0" behavior="2" himetric="556" distfromline="175" startobj="0" x="-13255" y="4018" visible="1" allowoverlap="1" usepercent="1" /&gt;
+        &lt;/polyline&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}/paths/1548" vartype="8" /&gt;
+        &lt;property name="Virtual" value="0" vartype="11" /&gt;
+        &lt;property name="VisibleAP" value="0" vartype="3" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;connector sourceid="2" destid="6" sourceattachpoint="5" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;
+      &lt;point x="-11351" y="4037" /&gt;
+      &lt;point x="-11351" y="4537" /&gt;
+      &lt;point x="-12850" y="4537" /&gt;
+      &lt;point x="-12850" y="5037" /&gt;
+    &lt;/connector&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Executes an SQL command for each row in a dataset." left="-10551" top="5037" logicalid="19" controlid="8" masterid="0" hint1="0" hint2="0" width="3598" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000800000e0e00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}/components/1595" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Polyline" left="-10650" top="3638" logicalid="20" controlid="9" masterid="0" hint1="0" hint2="0" width="2298" height="1899" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1"&gt;
+          &lt;adornment percentpos="79.9919967987195" controlid="13" width="4931" height="344" side="0" behavior="2" himetric="1999" distfromline="175" startobj="0" x="-13858" y="4712" visible="1" allowoverlap="1" usepercent="1" /&gt;
+        &lt;/polyline&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}/paths/1605" vartype="8" /&gt;
+        &lt;property name="Virtual" value="0" vartype="11" /&gt;
+        &lt;property name="VisibleAP" value="0" vartype="3" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;connector sourceid="2" destid="8" sourceattachpoint="9" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;
+      &lt;point x="-10251" y="4037" /&gt;
+      &lt;point x="-10251" y="4537" /&gt;
+      &lt;point x="-8752" y="4537" /&gt;
+      &lt;point x="-8752" y="5037" /&gt;
+    &lt;/connector&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Text" left="-13858" top="4712" logicalid="24" controlid="13" masterid="9" hint1="0" hint2="0" width="4931" height="344" noresize="1" nomove="0" nodefaultattachpoints="1" autodrag="1" usedefaultiddshape="1" selectable="0" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="1" groupcollapsed="0" tabstop="0" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000200004313000058010000030000000000050000800800008001000000350001000000900144420100065461686f6d6121004300680061006e00670069006e00670020004100740074007200690062007500740065002000550070006400610074006500730020004f007500740070007500740000000000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="AnnotationAdornment" value="-1" vartype="11" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Text" left="-13255" top="4018" logicalid="25" controlid="14" masterid="7" hint1="0" hint2="0" width="1673" height="344" noresize="1" nomove="0" nodefaultattachpoints="1" autodrag="1" usedefaultiddshape="1" selectable="0" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="1" groupcollapsed="0" tabstop="0" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000200008906000058010000030000000000050000800800008001000000350001000000900144420100065461686f6d610a004e006500770020004f007500740070007500740000000000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="AnnotationAdornment" value="-1" vartype="11" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+&lt;/dds&gt;&lt;/dwd:Layout&gt;&lt;dwd:PersistedViewPortLeft&gt;-13105&lt;/dwd:PersistedViewPortLeft&gt;&lt;dwd:PersistedViewPortTop&gt;-3117&lt;/dwd:PersistedViewPortTop&gt;&lt;/dwd:DtsDataFlowDiagram&gt;&lt;dwd:DtsComponentDesignerPropertiesList&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;64	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;756	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1001	SCDMetadata&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;&amp;lt;?xml version="1.0" encoding="utf-16"?&amp;gt;
+&amp;lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;
+  &amp;lt;ConnectionID&amp;gt;{C88FC50C-E3EE-4A90-BBAC-11D67C6FA428}&amp;lt;/ConnectionID&amp;gt;
+  &amp;lt;TableName&amp;gt;[dbo].[dim_store]&amp;lt;/TableName&amp;gt;
+  &amp;lt;InputToColumnsCollection&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;316&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;city&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;325&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;country&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;1157&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;create_timestamp&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;None&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;340&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;division&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;328&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;phone_number&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;343&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;prior_division&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;1444&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;prior_division_date&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;334&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;prior_region&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;1441&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;prior_region_date&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;331&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;region&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;131&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;source_system_code&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;319&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;state&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;476&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;store_address1&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;479&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;store_address2&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;482&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;store_address3&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;485&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;store_address4&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;32&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;store_key&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;BusinessKey&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;None&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;38&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;store_name&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;35&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;store_number&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;301&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;store_type&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;1160&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;update_timestamp&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;50&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;web_site&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+    &amp;lt;InputColumnToDBColumn&amp;gt;
+      &amp;lt;LineageID&amp;gt;322&amp;lt;/LineageID&amp;gt;
+      &amp;lt;ColumnName&amp;gt;zipcode&amp;lt;/ColumnName&amp;gt;
+      &amp;lt;KeyType&amp;gt;None&amp;lt;/KeyType&amp;gt;
+      &amp;lt;ChangeType&amp;gt;ChangingAttribute&amp;lt;/ChangeType&amp;gt;
+    &amp;lt;/InputColumnToDBColumn&amp;gt;
+  &amp;lt;/InputToColumnsCollection&amp;gt;
+  &amp;lt;GeneratedComponentsIDs&amp;gt;
+    &amp;lt;anyType xsi:type="xsd:int"&amp;gt;1531&amp;lt;/anyType&amp;gt;
+    &amp;lt;anyType xsi:type="xsd:int"&amp;gt;1595&amp;lt;/anyType&amp;gt;
+  &amp;lt;/GeneratedComponentsIDs&amp;gt;
+  &amp;lt;FailFixedAttribute&amp;gt;false&amp;lt;/FailFixedAttribute&amp;gt;
+  &amp;lt;FailChangeAttribute&amp;gt;true&amp;lt;/FailChangeAttribute&amp;gt;
+  &amp;lt;UseStartEndDate&amp;gt;false&amp;lt;/UseStartEndDate&amp;gt;
+  &amp;lt;CurrentIndicatorColumn /&amp;gt;
+  &amp;lt;InferredIndicatorColumn /&amp;gt;
+  &amp;lt;ValueCurrent /&amp;gt;
+  &amp;lt;ValueExpired /&amp;gt;
+  &amp;lt;StartDateColumn /&amp;gt;
+  &amp;lt;EndDateColumn /&amp;gt;
+  &amp;lt;DateVariable /&amp;gt;
+  &amp;lt;EnableInferredSupport&amp;gt;false&amp;lt;/EnableInferredSupport&amp;gt;
+&amp;lt;/SCDWizardMetadata&amp;gt;&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1531	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;64	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;756	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1531	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;/dwd:DtsComponentDesignerPropertiesList&gt;&lt;/TaskHost&gt;</DTS:Property><DTS:Property DTS:Name="Namespace">dts-designer-1.0</DTS:Property><DTS:Property DTS:Name="ObjectName">{C577EF8B-6FF2-4574-8A01-2CCDE878D443}</DTS:Property><DTS:Property DTS:Name="DTSID">{74F94FC2-6EAB-4E51-9BF6-591FE0243CE7}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PackageVariable>
+<DTS:PackageVariable><DTS:Property DTS:Name="PackageVariableValue" DTS:DataType="8">&lt;PipelinePath xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:PathAnnotation&gt;AsNeeded&lt;/dwd:PathAnnotation&gt;&lt;dwd:DestinationName&gt;Slowly Changing Dimension Input&lt;/dwd:DestinationName&gt;&lt;dwd:SourceName&gt;Derived Column Output&lt;/dwd:SourceName&gt;&lt;/PipelinePath&gt;</DTS:Property><DTS:Property DTS:Name="Namespace">dts-designer-1.0</DTS:Property><DTS:Property DTS:Name="ObjectName">{C577EF8B-6FF2-4574-8A01-2CCDE878D443}-1129</DTS:Property><DTS:Property DTS:Name="DTSID">{07E6069C-08A4-4487-B0C3-26D27C22FCF4}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PackageVariable>
+<DTS:PackageVariable><DTS:Property DTS:Name="PackageVariableValue" DTS:DataType="8">&lt;PipelinePath xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:PathAnnotation&gt;AsNeeded&lt;/dwd:PathAnnotation&gt;&lt;dwd:DestinationName&gt;Derived Column Input&lt;/dwd:DestinationName&gt;&lt;dwd:SourceName&gt;OLE DB Source Output&lt;/dwd:SourceName&gt;&lt;/PipelinePath&gt;</DTS:Property><DTS:Property DTS:Name="Namespace">dts-designer-1.0</DTS:Property><DTS:Property DTS:Name="ObjectName">{C577EF8B-6FF2-4574-8A01-2CCDE878D443}-1409</DTS:Property><DTS:Property DTS:Name="DTSID">{1EF513E1-EBE3-470C-9145-3115ED9F9727}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PackageVariable>
+<DTS:PackageVariable><DTS:Property DTS:Name="PackageVariableValue" DTS:DataType="8">&lt;PipelinePath xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:PathAnnotation&gt;AsNeeded&lt;/dwd:PathAnnotation&gt;&lt;dwd:DestinationName&gt;OLE DB Destination Input&lt;/dwd:DestinationName&gt;&lt;dwd:SourceName&gt;New Output&lt;/dwd:SourceName&gt;&lt;/PipelinePath&gt;</DTS:Property><DTS:Property DTS:Name="Namespace">dts-designer-1.0</DTS:Property><DTS:Property DTS:Name="ObjectName">{C577EF8B-6FF2-4574-8A01-2CCDE878D443}-1548</DTS:Property><DTS:Property DTS:Name="DTSID">{9807B43E-BBD3-4C40-AD8D-0AA25B480FAD}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PackageVariable>
+<DTS:PackageVariable><DTS:Property DTS:Name="PackageVariableValue" DTS:DataType="8">&lt;PipelinePath xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:PathAnnotation&gt;AsNeeded&lt;/dwd:PathAnnotation&gt;&lt;dwd:DestinationName&gt;OLE DB Command Input&lt;/dwd:DestinationName&gt;&lt;dwd:SourceName&gt;Changing Attribute Updates Output&lt;/dwd:SourceName&gt;&lt;/PipelinePath&gt;</DTS:Property><DTS:Property DTS:Name="Namespace">dts-designer-1.0</DTS:Property><DTS:Property DTS:Name="ObjectName">{C577EF8B-6FF2-4574-8A01-2CCDE878D443}-1605</DTS:Property><DTS:Property DTS:Name="DTSID">{EE3F75F7-B98F-4869-B1B4-0F1B42095919}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PackageVariable><DTS:Property DTS:Name="ForceExecValue">0</DTS:Property><DTS:Property DTS:Name="ExecValue" DTS:DataType="3">0</DTS:Property><DTS:Property DTS:Name="ForceExecutionResult">-1</DTS:Property><DTS:Property DTS:Name="Disabled">0</DTS:Property><DTS:Property DTS:Name="FailPackageOnFailure">0</DTS:Property><DTS:Property DTS:Name="FailParentOnFailure">0</DTS:Property><DTS:Property DTS:Name="MaxErrorCount">1</DTS:Property><DTS:Property DTS:Name="ISOLevel">1048576</DTS:Property><DTS:Property DTS:Name="LocaleID">2057</DTS:Property><DTS:Property DTS:Name="TransactionOption">1</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property>
+<DTS:Variable><DTS:Property DTS:Name="Expression"></DTS:Property><DTS:Property DTS:Name="EvaluateAsExpression">0</DTS:Property><DTS:Property DTS:Name="Namespace">User</DTS:Property><DTS:Property DTS:Name="ReadOnly">0</DTS:Property><DTS:Property DTS:Name="RaiseChangedEvent">0</DTS:Property><DTS:VariableValue DTS:DataType="7">01/01/2007</DTS:VariableValue><DTS:Property DTS:Name="ObjectName">dtCET_Store</DTS:Property><DTS:Property DTS:Name="DTSID">{82BB761B-91A0-419F-8E73-9A7755519556}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:Variable>
+<DTS:Variable><DTS:Property DTS:Name="Expression"></DTS:Property><DTS:Property DTS:Name="EvaluateAsExpression">0</DTS:Property><DTS:Property DTS:Name="Namespace">User</DTS:Property><DTS:Property DTS:Name="ReadOnly">0</DTS:Property><DTS:Property DTS:Name="RaiseChangedEvent">0</DTS:Property><DTS:VariableValue DTS:DataType="7">01/01/2007</DTS:VariableValue><DTS:Property DTS:Name="ObjectName">dtLSET_Store</DTS:Property><DTS:Property DTS:Name="DTSID">{D21D00F4-2717-4584-A8B0-A620E74903BB}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:Variable>
+<DTS:LoggingOptions><DTS:Property DTS:Name="LoggingMode">0</DTS:Property><DTS:Property DTS:Name="FilterKind">1</DTS:Property><DTS:Property DTS:Name="EventFilter" DTS:DataType="8"></DTS:Property></DTS:LoggingOptions>
+<DTS:Executable DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" DTS:ThreadHint="0"><DTS:Property DTS:Name="ExecutionLocation">0</DTS:Property><DTS:Property DTS:Name="ExecutionAddress"></DTS:Property><DTS:Property DTS:Name="TaskContact">Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1</DTS:Property><DTS:Property DTS:Name="ForceExecValue">0</DTS:Property><DTS:Property DTS:Name="ExecValue" DTS:DataType="3">0</DTS:Property><DTS:Property DTS:Name="ForceExecutionResult">-1</DTS:Property><DTS:Property DTS:Name="Disabled">0</DTS:Property><DTS:Property DTS:Name="FailPackageOnFailure">0</DTS:Property><DTS:Property DTS:Name="FailParentOnFailure">0</DTS:Property><DTS:Property DTS:Name="MaxErrorCount">1</DTS:Property><DTS:Property DTS:Name="ISOLevel">1048576</DTS:Property><DTS:Property DTS:Name="LocaleID">-1</DTS:Property><DTS:Property DTS:Name="TransactionOption">1</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property>
+<DTS:LoggingOptions><DTS:Property DTS:Name="LoggingMode">0</DTS:Property><DTS:Property DTS:Name="FilterKind">1</DTS:Property><DTS:Property DTS:Name="EventFilter" DTS:DataType="8"></DTS:Property></DTS:LoggingOptions><DTS:Property DTS:Name="ObjectName">Set CET</DTS:Property><DTS:Property DTS:Name="DTSID">{00B1166C-EB5E-4BE0-BE6A-2A23CE2A45D0}</DTS:Property><DTS:Property DTS:Name="Description">Execute SQL Task</DTS:Property><DTS:Property DTS:Name="CreationName">Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</DTS:Property><DTS:Property DTS:Name="DisableEventHandlers">0</DTS:Property><DTS:ObjectData><SQLTask:SqlTaskData SQLTask:Connection="{06A7CB12-8128-4EFE-B427-AD787EFD9E69}" SQLTask:TimeOut="0" SQLTask:IsStoredProc="False" SQLTask:SqlStmtSourceType="DirectInput" SQLTask:SqlStatementSource="update meta.dbo.data_flow set CET = getdate() where name = 'dds_store'" SQLTask:ResultType="ResultSetType_None" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask"/></DTS:ObjectData></DTS:Executable>
+<DTS:Executable DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" DTS:ThreadHint="0"><DTS:Property DTS:Name="ExecutionLocation">0</DTS:Property><DTS:Property DTS:Name="ExecutionAddress"></DTS:Property><DTS:Property DTS:Name="TaskContact">Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1</DTS:Property><DTS:Property DTS:Name="ForceExecValue">0</DTS:Property><DTS:Property DTS:Name="ExecValue" DTS:DataType="3">0</DTS:Property><DTS:Property DTS:Name="ForceExecutionResult">-1</DTS:Property><DTS:Property DTS:Name="Disabled">0</DTS:Property><DTS:Property DTS:Name="FailPackageOnFailure">0</DTS:Property><DTS:Property DTS:Name="FailParentOnFailure">0</DTS:Property><DTS:Property DTS:Name="MaxErrorCount">1</DTS:Property><DTS:Property DTS:Name="ISOLevel">1048576</DTS:Property><DTS:Property DTS:Name="LocaleID">-1</DTS:Property><DTS:Property DTS:Name="TransactionOption">1</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property>
+<DTS:LoggingOptions><DTS:Property DTS:Name="LoggingMode">0</DTS:Property><DTS:Property DTS:Name="FilterKind">1</DTS:Property><DTS:Property DTS:Name="EventFilter" DTS:DataType="8"></DTS:Property></DTS:LoggingOptions><DTS:Property DTS:Name="ObjectName">Get LSET</DTS:Property><DTS:Property DTS:Name="DTSID">{CE8168D1-4A6D-49A0-995C-D25BE0578E2F}</DTS:Property><DTS:Property DTS:Name="Description">Execute SQL Task</DTS:Property><DTS:Property DTS:Name="CreationName">Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</DTS:Property><DTS:Property DTS:Name="DisableEventHandlers">0</DTS:Property><DTS:ObjectData><SQLTask:SqlTaskData SQLTask:Connection="{06A7CB12-8128-4EFE-B427-AD787EFD9E69}" SQLTask:TimeOut="0" SQLTask:IsStoredProc="False" SQLTask:SqlStmtSourceType="DirectInput" SQLTask:SqlStatementSource="select CET, LSET from meta.dbo.data_flow &#xA;where name = 'dds_store'" SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask"><SQLTask:ResultBinding SQLTask:ResultName="CET" SQLTask:DtsVariableName="User::dtCET_Store"/><SQLTask:ResultBinding SQLTask:ResultName="LSET" SQLTask:DtsVariableName="User::dtLSET_Store"/></SQLTask:SqlTaskData></DTS:ObjectData></DTS:Executable>
+<DTS:Executable DTS:ExecutableType="DTS.Pipeline.1"><DTS:Property DTS:Name="ExecutionLocation">0</DTS:Property><DTS:Property DTS:Name="ExecutionAddress"></DTS:Property><DTS:Property DTS:Name="TaskContact">Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1</DTS:Property><DTS:Property DTS:Name="ForceExecValue">0</DTS:Property><DTS:Property DTS:Name="ExecValue" DTS:DataType="3">0</DTS:Property><DTS:Property DTS:Name="ForceExecutionResult">-1</DTS:Property><DTS:Property DTS:Name="Disabled">0</DTS:Property><DTS:Property DTS:Name="FailPackageOnFailure">0</DTS:Property><DTS:Property DTS:Name="FailParentOnFailure">0</DTS:Property><DTS:Property DTS:Name="MaxErrorCount">1</DTS:Property><DTS:Property DTS:Name="ISOLevel">1048576</DTS:Property><DTS:Property DTS:Name="LocaleID">-1</DTS:Property><DTS:Property DTS:Name="TransactionOption">1</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property>
+<DTS:LoggingOptions><DTS:Property DTS:Name="LoggingMode">0</DTS:Property><DTS:Property DTS:Name="FilterKind">1</DTS:Property><DTS:Property DTS:Name="EventFilter" DTS:DataType="8"></DTS:Property></DTS:LoggingOptions><DTS:Property DTS:Name="ObjectName">Populate Store</DTS:Property><DTS:Property DTS:Name="DTSID">{C577EF8B-6FF2-4574-8A01-2CCDE878D443}</DTS:Property><DTS:Property DTS:Name="Description">Data Flow Task</DTS:Property><DTS:Property DTS:Name="CreationName">DTS.Pipeline.1</DTS:Property><DTS:Property DTS:Name="DisableEventHandlers">0</DTS:Property><DTS:ObjectData><pipeline id="0" name="pipelineXml" description="pipelineXml" defaultBufferMaxRows="10000" engineThreads="5" defaultBufferSize="10485760" BLOBTempStoragePath="" bufferTempStoragePath="" runInOptimizedMode="true">
+<components>
+<component id="1" name="NDS Store" componentClassID="{2C0A8BE5-1EDC-4353-A0EF-B778599C65A0}" description="OLE DB Source" localeId="-1" usesDispositions="true" validateExternalMetadata="True" version="7" pipelineVersion="0" contactInfo="OLE DB Source;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7">
+<properties>
+<property id="2" name="CommandTimeout" dataType="System.Int32" state="default" isArray="false" description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">0</property>
+<property id="3" name="OpenRowset" dataType="System.String" state="default" isArray="false" description="Specifies the name of the database object used to open a rowset." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">[dbo].[store]</property>
+<property id="4" name="OpenRowsetVariable" dataType="System.String" state="default" isArray="false" description="Specifies the variable that contains the name of the database object used to open a rowset." typeConverter="" UITypeEditor="" containsID="false" expressionType="None"></property>
+<property id="5" name="SqlCommand" dataType="System.String" state="default" isArray="false" description="The SQL command to be executed." typeConverter="" UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" containsID="false" expressionType="None">select s.store_key, s.store_number, s.store_name
+, s2.store_type, a.address1 as store_address1
+, a.address2 as store_address2
+, a.address3 as store_address3
+, a.address4 as store_address4
+, c.city_name as city, s3.state_name as state
+, a.post_code as zipcode, c2.country_name as country
+, p.phone_number, s.web_site, r.region_name as region
+, '' as prior_region
+, d.division_name as division
+, '' as prior_division
+, s.source_system_code
+from store s
+left join store_type s2
+ on s2.store_type_key = s.store_type_key 
+left join address a
+ on a.address_key = s.address_key
+left join city c
+ on c.city_key = a.city_key
+left join state s3
+ on s3.state_key = a.state_key
+left join country c2
+ on c2.country_key = a.country_key
+left join phone_number p
+ on p.phone_number_key = s.phone_number_key
+left join region r
+ on r.region_key = s.region_key
+left join division d
+ on d.division_key = r.division_key
+where (s.create_timestamp between ? and ?) 
+or (s.update_timestamp between ? and ?)</property>
+<property id="6" name="SqlCommandVariable" dataType="System.String" state="default" isArray="false" description="The variable that contains the SQL command to be executed." typeConverter="" UITypeEditor="" containsID="false" expressionType="None"></property>
+<property id="7" name="DefaultCodePage" dataType="System.Int32" state="default" isArray="false" description="Specifies the column code page to use when code page information is unavailable from the data source." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">1252</property>
+<property id="8" name="AlwaysUseDefaultCodePage" dataType="System.Boolean" state="default" isArray="false" description="Forces the use of the DefaultCodePage property value when describing character data." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">false</property>
+<property id="9" name="AccessMode" dataType="System.Int32" state="default" isArray="false" description="Specifies the mode used to access the database." typeConverter="AccessMode" UITypeEditor="" containsID="false" expressionType="None">2</property>
+<property id="15" name="ParameterMapping" dataType="System.String" state="default" isArray="false" description="The mappings between the parameters in the SQL command and variables." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">"Parameter0",{D21D00F4-2717-4584-A8B0-A620E74903BB};"Parameter1",{82BB761B-91A0-419F-8E73-9A7755519556};"Parameter2",{D21D00F4-2717-4584-A8B0-A620E74903BB};"Parameter3",{82BB761B-91A0-419F-8E73-9A7755519556};</property></properties>
+<connections>
+<connection id="10" name="OleDbConnection" description="The OLE DB runtime connection used to access the database." connectionManagerID="{724B07C0-2181-4E92-A261-5FF6A4D0E20B}"/></connections>
+<outputs>
+<output id="11" name="OLE DB Source Output" description="" exclusionGroup="0" synchronousInputId="0" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="false" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><outputColumns>
+<outputColumn id="32" name="store_key" description="" lineageId="32" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="31"/>
+<outputColumn id="35" name="store_number" description="" lineageId="35" precision="0" scale="0" length="0" dataType="i2" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="34"/>
+<outputColumn id="38" name="store_name" description="" lineageId="38" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="37"/>
+<outputColumn id="50" name="web_site" description="" lineageId="50" precision="0" scale="0" length="100" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="49"/>
+<outputColumn id="131" name="source_system_code" description="" lineageId="131" precision="0" scale="0" length="0" dataType="ui1" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="55"/>
+<outputColumn id="301" name="store_type" description="" lineageId="301" precision="0" scale="0" length="30" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="300"/>
+<outputColumn id="316" name="city" description="" lineageId="316" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="315"/>
+<outputColumn id="319" name="state" description="" lineageId="319" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="318"/>
+<outputColumn id="322" name="zipcode" description="" lineageId="322" precision="0" scale="0" length="10" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="321"/>
+<outputColumn id="325" name="country" description="" lineageId="325" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="324"/>
+<outputColumn id="328" name="phone_number" description="" lineageId="328" precision="0" scale="0" length="20" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="327"/>
+<outputColumn id="331" name="region" description="" lineageId="331" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="330"/>
+<outputColumn id="334" name="prior_region" description="" lineageId="334" precision="0" scale="0" length="1" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="333"/>
+<outputColumn id="340" name="division" description="" lineageId="340" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="339"/>
+<outputColumn id="343" name="prior_division" description="" lineageId="343" precision="0" scale="0" length="1" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="342"/>
+<outputColumn id="476" name="store_address1" description="" lineageId="476" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="475"/>
+<outputColumn id="479" name="store_address2" description="" lineageId="479" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="478"/>
+<outputColumn id="482" name="store_address3" description="" lineageId="482" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="481"/>
+<outputColumn id="485" name="store_address4" description="" lineageId="485" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="484"/></outputColumns><externalMetadataColumns isUsed="True">
+<externalMetadataColumn id="31" name="store_key" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="34" name="store_number" description="" precision="0" scale="0" length="0" dataType="i2" codePage="0"/>
+<externalMetadataColumn id="37" name="store_name" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="49" name="web_site" description="" precision="0" scale="0" length="100" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="55" name="source_system_code" description="" precision="0" scale="0" length="0" dataType="ui1" codePage="0"/>
+<externalMetadataColumn id="300" name="store_type" description="" precision="0" scale="0" length="30" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="315" name="city" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="318" name="state" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="321" name="zipcode" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="324" name="country" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="327" name="phone_number" description="" precision="0" scale="0" length="20" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="330" name="region" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="333" name="prior_region" description="" precision="0" scale="0" length="1" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="339" name="division" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="342" name="prior_division" description="" precision="0" scale="0" length="1" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="475" name="store_address1" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="478" name="store_address2" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="481" name="store_address3" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="484" name="store_address4" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/></externalMetadataColumns></output>
+<output id="12" name="OLE DB Source Error Output" description="" exclusionGroup="0" synchronousInputId="0" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="true" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><outputColumns>
+<outputColumn id="33" name="store_key" description="" lineageId="33" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="36" name="store_number" description="" lineageId="36" precision="0" scale="0" length="0" dataType="i2" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="39" name="store_name" description="" lineageId="39" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="302" name="store_type" description="" lineageId="302" precision="0" scale="0" length="30" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="477" name="store_address1" description="" lineageId="477" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="480" name="store_address2" description="" lineageId="480" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="483" name="store_address3" description="" lineageId="483" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="486" name="store_address4" description="" lineageId="486" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="317" name="city" description="" lineageId="317" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="320" name="state" description="" lineageId="320" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="323" name="zipcode" description="" lineageId="323" precision="0" scale="0" length="10" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="326" name="country" description="" lineageId="326" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="329" name="phone_number" description="" lineageId="329" precision="0" scale="0" length="20" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="51" name="web_site" description="" lineageId="51" precision="0" scale="0" length="100" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="332" name="region" description="" lineageId="332" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="335" name="prior_region" description="" lineageId="335" precision="0" scale="0" length="1" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="341" name="division" description="" lineageId="341" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="344" name="prior_division" description="" lineageId="344" precision="0" scale="0" length="1" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="13" name="ErrorCode" description="" lineageId="13" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="1" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="14" name="ErrorColumn" description="" lineageId="14" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="2" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="132" name="source_system_code" description="" lineageId="132" precision="0" scale="0" length="0" dataType="ui1" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/></outputColumns><externalMetadataColumns isUsed="False"/></output>
+</outputs>
+</component>
+<component id="1122" name="Derived Column" componentClassID="{9CF90BF0-5BCC-4C63-B91D-1F322DC12C26}" description="Updates column values using expressions" localeId="-1" usesDispositions="true" validateExternalMetadata="True" version="0" pipelineVersion="0" contactInfo="Derived Column;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+<inputs>
+<input id="1123" name="Derived Column Input" description="Input to the Derived Column Transformation" hasSideEffects="false" dangling="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><externalMetadataColumns isUsed="False"/></input>
+</inputs>
+<outputs>
+<output id="1124" name="Derived Column Output" description="Default Output of the Derived Column Transformation" exclusionGroup="1" synchronousInputId="1123" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="false" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><outputColumns>
+<outputColumn id="1157" name="create_timestamp" description="" lineageId="1157" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Computation" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="0"><properties>
+<property id="1158" name="Expression" dataType="System.String" state="default" isArray="false" description="Derived Column Expression" typeConverter="" UITypeEditor="" containsID="true" expressionType="None">[GETDATE]()</property>
+<property id="1159" name="FriendlyExpression" dataType="System.String" state="default" isArray="false" description="Derived Column Friendly Expression" typeConverter="" UITypeEditor="" containsID="true" expressionType="Notify">GETDATE()</property></properties></outputColumn>
+<outputColumn id="1160" name="update_timestamp" description="" lineageId="1160" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Computation" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="0"><properties>
+<property id="1161" name="Expression" dataType="System.String" state="default" isArray="false" description="Derived Column Expression" typeConverter="" UITypeEditor="" containsID="true" expressionType="None">[GETDATE]()</property>
+<property id="1162" name="FriendlyExpression" dataType="System.String" state="default" isArray="false" description="Derived Column Friendly Expression" typeConverter="" UITypeEditor="" containsID="true" expressionType="Notify">GETDATE()</property></properties></outputColumn>
+<outputColumn id="1441" name="prior_region_date" description="" lineageId="1441" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Computation" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="0"><properties>
+<property id="1442" name="Expression" dataType="System.String" state="default" isArray="false" description="Derived Column Expression" typeConverter="" UITypeEditor="" containsID="true" expressionType="None">(DT_DBTIMESTAMP)(1900 - 01 - 01)</property>
+<property id="1443" name="FriendlyExpression" dataType="System.String" state="default" isArray="false" description="Derived Column Friendly Expression" typeConverter="" UITypeEditor="" containsID="true" expressionType="Notify">(DT_DBTIMESTAMP)(1900 - 01 - 01)</property></properties></outputColumn>
+<outputColumn id="1444" name="prior_division_date" description="" lineageId="1444" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Computation" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="0"><properties>
+<property id="1445" name="Expression" dataType="System.String" state="default" isArray="false" description="Derived Column Expression" typeConverter="" UITypeEditor="" containsID="true" expressionType="None">(DT_DBTIMESTAMP)(1900 - 01 - 01)</property>
+<property id="1446" name="FriendlyExpression" dataType="System.String" state="default" isArray="false" description="Derived Column Friendly Expression" typeConverter="" UITypeEditor="" containsID="true" expressionType="Notify">(DT_DBTIMESTAMP)(1900 - 01 - 01)</property></properties></outputColumn></outputColumns><externalMetadataColumns isUsed="False"/></output>
+<output id="1125" name="Derived Column Error Output" description="Error Output of the Derived Column Transformation" exclusionGroup="1" synchronousInputId="1123" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="true" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><outputColumns>
+<outputColumn id="1126" name="ErrorCode" description="" lineageId="1126" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="1" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="1127" name="ErrorColumn" description="" lineageId="1127" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="2" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/></outputColumns><externalMetadataColumns isUsed="False"/></output>
+</outputs>
+</component>
+<component id="1001" name="Slowly Changing Dimension" componentClassID="{7C0CACA3-B152-40B1-8379-E37AE8E1DD5A}" description="Updates a slowly changing dimension." localeId="-1" usesDispositions="false" validateExternalMetadata="True" version="3" pipelineVersion="0" contactInfo="Slowly Changing Dimension;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3">
+<properties>
+<property id="1003" name="SqlCommand" dataType="System.String" state="default" isArray="false" description="Specifies the SELECT statement used to create a schema rowset." typeConverter="" UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" containsID="false" expressionType="None">SELECT [city], [country], [division], [phone_number], [prior_division], [prior_division_date], [prior_region], [prior_region_date], [region], [source_system_code], [state], [store_address1], [store_address2], [store_address3], [store_address4], [store_key], [store_name], [store_number], [store_type], [update_timestamp], [web_site], [zipcode] FROM [dbo].[dim_store]</property>
+<property id="1004" name="CurrentRowWhere" dataType="System.String" state="default" isArray="false" description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys." typeConverter="" UITypeEditor="" containsID="false" expressionType="None"></property>
+<property id="1005" name="UpdateChangingAttributeHistory" dataType="System.Boolean" state="default" isArray="false" description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">true</property>
+<property id="1006" name="FailOnFixedAttributeChange" dataType="System.Boolean" state="default" isArray="false" description="Indicates whether the transformation fails when columns with fixed attributes contain changes." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">false</property>
+<property id="1007" name="InferredMemberIndicator" dataType="System.String" state="default" isArray="false" description="Specifies the column name for the inferred member." typeConverter="" UITypeEditor="" containsID="false" expressionType="None"></property>
+<property id="1008" name="EnableInferredMember" dataType="System.Boolean" state="default" isArray="false" description="Indicates whether inferred member updates are detected." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">false</property>
+<property id="1009" name="FailOnLookupFailure" dataType="System.Boolean" state="default" isArray="false" description="Indicates whether the transformation fails when a lookup of an existing record fails." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">false</property>
+<property id="1010" name="IncomingRowChangeType" dataType="System.Int32" state="default" isArray="false" description="Specifies that all rows in the input are new or the transformation detects the change type." typeConverter="IncomingRowChangeType" UITypeEditor="" containsID="false" expressionType="None">1</property>
+<property id="1011" name="DefaultCodePage" dataType="System.Int32" state="default" isArray="false" description="Specifies the column code page to use when code page information is unavailable from the data source." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">1252</property></properties>
+<connections>
+<connection id="1002" name="LookupConnection" description="Defines the connection to use for lookups in the dimension table" connectionManagerID="{C88FC50C-E3EE-4A90-BBAC-11D67C6FA428}"/></connections>
+<inputs>
+<input id="1012" name="Slowly Changing Dimension Input" description="" hasSideEffects="false" dangling="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><inputColumns>
+<inputColumn id="1487" name="" description="" lineageId="316" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1465"><properties>
+<property id="1488" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1489" name="" description="" lineageId="325" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1466"><properties>
+<property id="1490" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1491" name="" description="" lineageId="340" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1467"><properties>
+<property id="1492" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1493" name="" description="" lineageId="328" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1468"><properties>
+<property id="1494" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1495" name="" description="" lineageId="343" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1469"><properties>
+<property id="1496" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1497" name="" description="" lineageId="1444" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1470"><properties>
+<property id="1498" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1499" name="" description="" lineageId="334" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1471"><properties>
+<property id="1500" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1501" name="" description="" lineageId="1441" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1472"><properties>
+<property id="1502" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1503" name="" description="" lineageId="331" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1473"><properties>
+<property id="1504" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1505" name="" description="" lineageId="131" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1474"><properties>
+<property id="1506" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1507" name="" description="" lineageId="319" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1475"><properties>
+<property id="1508" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1509" name="" description="" lineageId="476" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1476"><properties>
+<property id="1510" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1511" name="" description="" lineageId="479" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1477"><properties>
+<property id="1512" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1513" name="" description="" lineageId="482" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1478"><properties>
+<property id="1514" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1515" name="" description="" lineageId="485" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1479"><properties>
+<property id="1516" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1517" name="" description="" lineageId="32" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1480"><properties>
+<property id="1518" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">1</property></properties></inputColumn>
+<inputColumn id="1519" name="" description="" lineageId="38" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1481"><properties>
+<property id="1520" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1521" name="" description="" lineageId="35" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1482"><properties>
+<property id="1522" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1523" name="" description="" lineageId="301" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1483"><properties>
+<property id="1524" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1525" name="" description="" lineageId="1160" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1484"><properties>
+<property id="1526" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1527" name="" description="" lineageId="50" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1485"><properties>
+<property id="1528" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+<inputColumn id="1529" name="" description="" lineageId="322" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1486"><properties>
+<property id="1530" name="ColumnType" dataType="System.Int32" state="default" isArray="false" description="" typeConverter="ColumnType" UITypeEditor="" containsID="false" expressionType="None">2</property></properties></inputColumn>
+</inputColumns><externalMetadataColumns isUsed="True">
+<externalMetadataColumn id="1465" name="city" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1466" name="country" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1467" name="division" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1468" name="phone_number" description="" precision="0" scale="0" length="20" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1469" name="prior_division" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1470" name="prior_division_date" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"/>
+<externalMetadataColumn id="1471" name="prior_region" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1472" name="prior_region_date" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"/>
+<externalMetadataColumn id="1473" name="region" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1474" name="source_system_code" description="" precision="0" scale="0" length="0" dataType="ui1" codePage="0"/>
+<externalMetadataColumn id="1475" name="state" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1476" name="store_address1" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1477" name="store_address2" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1478" name="store_address3" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1479" name="store_address4" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1480" name="store_key" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="1481" name="store_name" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1482" name="store_number" description="" precision="0" scale="0" length="0" dataType="i2" codePage="0"/>
+<externalMetadataColumn id="1483" name="store_type" description="" precision="0" scale="0" length="30" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1484" name="update_timestamp" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"/>
+<externalMetadataColumn id="1485" name="web_site" description="" precision="0" scale="0" length="100" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1486" name="zipcode" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"/></externalMetadataColumns></input>
+</inputs>
+<outputs>
+<output id="1013" name="Unchanged Output" description="Unchanged rows" exclusionGroup="1" synchronousInputId="1012" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="false" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><externalMetadataColumns isUsed="False"/></output>
+<output id="1014" name="New Output" description="New rows" exclusionGroup="1" synchronousInputId="1012" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="false" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><externalMetadataColumns isUsed="False"/></output>
+<output id="1015" name="Fixed Attribute Output" description="Rows with changes in columns tagged FixedAttribute" exclusionGroup="1" synchronousInputId="1012" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="false" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><externalMetadataColumns isUsed="False"/></output>
+<output id="1016" name="Changing Attribute Updates Output" description="These rows contain new information for ChangingAttribute (Type 1) column changes" exclusionGroup="1" synchronousInputId="1012" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="false" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><externalMetadataColumns isUsed="False"/></output>
+<output id="1017" name="Historical Attribute Inserts Output" description="HistoricalAttribute (Type 2) changes result in these new rows" exclusionGroup="2" synchronousInputId="1012" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="false" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><externalMetadataColumns isUsed="False"/></output>
+<output id="1018" name="Inferred Member Updates Output" description="Information to update unpopulated initial dimension row" exclusionGroup="1" synchronousInputId="1012" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="false" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><externalMetadataColumns isUsed="False"/></output>
+</outputs>
+</component>
+<component id="1531" name="Insert Destination" componentClassID="{E2568105-9550-4F71-A638-B7FE42E66922}" description="OLE DB Destination" localeId="-1" usesDispositions="true" validateExternalMetadata="True" version="4" pipelineVersion="0" contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+<properties>
+<property id="1532" name="CommandTimeout" dataType="System.Int32" state="default" isArray="false" description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">0</property>
+<property id="1533" name="OpenRowset" dataType="System.String" state="default" isArray="false" description="Specifies the name of the database object used to open a rowset." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">[dbo].[dim_store]</property>
+<property id="1534" name="OpenRowsetVariable" dataType="System.String" state="default" isArray="false" description="Specifies the variable that contains the name of the database object used to open a rowset." typeConverter="" UITypeEditor="" containsID="false" expressionType="None"></property>
+<property id="1535" name="SqlCommand" dataType="System.String" state="default" isArray="false" description="The SQL command to be executed." typeConverter="" UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" containsID="false" expressionType="None"></property>
+<property id="1536" name="DefaultCodePage" dataType="System.Int32" state="default" isArray="false" description="Specifies the column code page to use when code page information is unavailable from the data source." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">1252</property>
+<property id="1537" name="AlwaysUseDefaultCodePage" dataType="System.Boolean" state="default" isArray="false" description="Forces the use of the DefaultCodePage property value when describing character data." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">false</property>
+<property id="1538" name="AccessMode" dataType="System.Int32" state="default" isArray="false" description="Specifies the mode used to access the database." typeConverter="AccessMode" UITypeEditor="" containsID="false" expressionType="None">0</property>
+<property id="1540" name="FastLoadKeepIdentity" dataType="System.Boolean" state="default" isArray="false" description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">false</property>
+<property id="1541" name="FastLoadKeepNulls" dataType="System.Boolean" state="default" isArray="false" description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">false</property>
+<property id="1542" name="FastLoadOptions" dataType="System.String" state="default" isArray="false" description="Specifies options to be used with fast load.  Applies only if fast load is turned on." typeConverter="" UITypeEditor="" containsID="false" expressionType="None"></property>
+<property id="1543" name="FastLoadMaxInsertCommitSize" dataType="System.Int32" state="default" isArray="false" description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">0</property></properties>
+<connections>
+<connection id="1539" name="OleDbConnection" description="The OLE DB runtime connection used to access the database." connectionManagerID="{C88FC50C-E3EE-4A90-BBAC-11D67C6FA428}"/></connections>
+<inputs>
+<input id="1544" name="OLE DB Destination Input" description="" hasSideEffects="true" dangling="false" errorOrTruncationOperation="Insert" errorRowDisposition="FailComponent" truncationRowDisposition="NotUsed"><inputColumns>
+<inputColumn id="1572" name="" description="" lineageId="32" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1549"/>
+<inputColumn id="1573" name="" description="" lineageId="35" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1550"/>
+<inputColumn id="1574" name="" description="" lineageId="38" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1551"/>
+<inputColumn id="1575" name="" description="" lineageId="301" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1552"/>
+<inputColumn id="1576" name="" description="" lineageId="476" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1553"/>
+<inputColumn id="1577" name="" description="" lineageId="479" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1554"/>
+<inputColumn id="1578" name="" description="" lineageId="482" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1555"/>
+<inputColumn id="1579" name="" description="" lineageId="485" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1556"/>
+<inputColumn id="1580" name="" description="" lineageId="316" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1557"/>
+<inputColumn id="1581" name="" description="" lineageId="319" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1558"/>
+<inputColumn id="1582" name="" description="" lineageId="322" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1559"/>
+<inputColumn id="1583" name="" description="" lineageId="325" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1560"/>
+<inputColumn id="1584" name="" description="" lineageId="328" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1561"/>
+<inputColumn id="1585" name="" description="" lineageId="50" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1562"/>
+<inputColumn id="1586" name="" description="" lineageId="331" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1563"/>
+<inputColumn id="1587" name="" description="" lineageId="334" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1564"/>
+<inputColumn id="1588" name="" description="" lineageId="1441" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1565"/>
+<inputColumn id="1589" name="" description="" lineageId="340" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1566"/>
+<inputColumn id="1590" name="" description="" lineageId="343" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1567"/>
+<inputColumn id="1591" name="" description="" lineageId="1444" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1568"/>
+<inputColumn id="1592" name="" description="" lineageId="131" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1569"/>
+<inputColumn id="1593" name="" description="" lineageId="1157" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1570"/>
+<inputColumn id="1594" name="" description="" lineageId="1160" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1571"/>
+</inputColumns><externalMetadataColumns isUsed="True">
+<externalMetadataColumn id="1549" name="store_key" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="1550" name="store_number" description="" precision="0" scale="0" length="0" dataType="i2" codePage="0"/>
+<externalMetadataColumn id="1551" name="store_name" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1552" name="store_type" description="" precision="0" scale="0" length="30" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1553" name="store_address1" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1554" name="store_address2" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1555" name="store_address3" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1556" name="store_address4" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1557" name="city" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1558" name="state" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1559" name="zipcode" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1560" name="country" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1561" name="phone_number" description="" precision="0" scale="0" length="20" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1562" name="web_site" description="" precision="0" scale="0" length="100" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1563" name="region" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1564" name="prior_region" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1565" name="prior_region_date" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"/>
+<externalMetadataColumn id="1566" name="division" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1567" name="prior_division" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="1568" name="prior_division_date" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"/>
+<externalMetadataColumn id="1569" name="source_system_code" description="" precision="0" scale="0" length="0" dataType="ui1" codePage="0"/>
+<externalMetadataColumn id="1570" name="create_timestamp" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"/>
+<externalMetadataColumn id="1571" name="update_timestamp" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"/></externalMetadataColumns></input>
+</inputs>
+<outputs>
+<output id="1545" name="OLE DB Destination Error Output" description="" exclusionGroup="1" synchronousInputId="1544" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="true" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><outputColumns>
+<outputColumn id="1546" name="ErrorCode" description="" lineageId="1546" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="1" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="1547" name="ErrorColumn" description="" lineageId="1547" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="2" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/></outputColumns><externalMetadataColumns isUsed="False"/></output>
+</outputs>
+</component>
+<component id="1595" name="OLE DB Command" componentClassID="{C60ACAD1-9BE8-46B3-87DA-70E59EADEA46}" description="Executes an SQL command for each row in a dataset." localeId="-1" usesDispositions="true" validateExternalMetadata="True" version="2" pipelineVersion="0" contactInfo="OLE DB Command;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2">
+<properties>
+<property id="1596" name="CommandTimeout" dataType="System.Int32" state="default" isArray="false" description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">0</property>
+<property id="1597" name="SqlCommand" dataType="System.String" state="default" isArray="false" description="The SQL command to be executed." typeConverter="" UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" containsID="false" expressionType="Notify">UPDATE [dbo].[dim_store] SET [city] = ?,[country] = ?,[division] = ?,[phone_number] = ?,[prior_division] = ?,[prior_division_date] = ?,[prior_region] = ?,[prior_region_date] = ?,[region] = ?,[source_system_code] = ?,[state] = ?,[store_address1] = ?,[store_address2] = ?,[store_address3] = ?,[store_address4] = ?,[store_name] = ?,[store_number] = ?,[store_type] = ?,[update_timestamp] = ?,[web_site] = ?,[zipcode] = ? WHERE [store_key] = ?</property>
+<property id="1598" name="DefaultCodePage" dataType="System.Int32" state="default" isArray="false" description="Specifies the column code page to use when code page information is unavailable from the data source." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">1252</property></properties>
+<connections>
+<connection id="1599" name="OleDbConnection" description="The OLE DB runtime connection used to access the database." connectionManagerID="{C88FC50C-E3EE-4A90-BBAC-11D67C6FA428}"/></connections>
+<inputs>
+<input id="1600" name="OLE DB Command Input" description="" hasSideEffects="true" dangling="false" errorOrTruncationOperation="Command Execution" errorRowDisposition="FailComponent" truncationRowDisposition="NotUsed"><inputColumns>
+<inputColumn id="1650" name="" description="" lineageId="316" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1606"/>
+<inputColumn id="1651" name="" description="" lineageId="325" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1608"/>
+<inputColumn id="1652" name="" description="" lineageId="340" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1610"/>
+<inputColumn id="1653" name="" description="" lineageId="328" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1612"/>
+<inputColumn id="1654" name="" description="" lineageId="343" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1614"/>
+<inputColumn id="1655" name="" description="" lineageId="1444" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1616"/>
+<inputColumn id="1656" name="" description="" lineageId="334" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1618"/>
+<inputColumn id="1657" name="" description="" lineageId="1441" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1620"/>
+<inputColumn id="1658" name="" description="" lineageId="331" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1622"/>
+<inputColumn id="1659" name="" description="" lineageId="131" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1624"/>
+<inputColumn id="1660" name="" description="" lineageId="319" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1626"/>
+<inputColumn id="1661" name="" description="" lineageId="476" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1628"/>
+<inputColumn id="1662" name="" description="" lineageId="479" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1630"/>
+<inputColumn id="1663" name="" description="" lineageId="482" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1632"/>
+<inputColumn id="1664" name="" description="" lineageId="485" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1634"/>
+<inputColumn id="1665" name="" description="" lineageId="32" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1648"/>
+<inputColumn id="1666" name="" description="" lineageId="38" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1636"/>
+<inputColumn id="1667" name="" description="" lineageId="35" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1638"/>
+<inputColumn id="1668" name="" description="" lineageId="301" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1640"/>
+<inputColumn id="1669" name="" description="" lineageId="1160" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1642"/>
+<inputColumn id="1670" name="" description="" lineageId="50" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1644"/>
+<inputColumn id="1671" name="" description="" lineageId="322" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="1646"/>
+</inputColumns><externalMetadataColumns isUsed="True">
+<externalMetadataColumn id="1606" name="Param_0" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1607" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1608" name="Param_1" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1609" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1610" name="Param_2" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1611" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1612" name="Param_3" description="" precision="0" scale="0" length="20" dataType="str" codePage="1252"><properties>
+<property id="1613" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1614" name="Param_4" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1615" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1616" name="Param_5" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"><properties>
+<property id="1617" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1618" name="Param_6" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1619" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1620" name="Param_7" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"><properties>
+<property id="1621" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1622" name="Param_8" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1623" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1624" name="Param_9" description="" precision="0" scale="0" length="0" dataType="ui1" codePage="0"><properties>
+<property id="1625" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1626" name="Param_10" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1627" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1628" name="Param_11" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1629" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1630" name="Param_12" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1631" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1632" name="Param_13" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1633" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1634" name="Param_14" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1635" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1636" name="Param_15" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"><properties>
+<property id="1637" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1638" name="Param_16" description="" precision="0" scale="0" length="0" dataType="i2" codePage="0"><properties>
+<property id="1639" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">81</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1640" name="Param_17" description="" precision="0" scale="0" length="30" dataType="str" codePage="1252"><properties>
+<property id="1641" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1642" name="Param_18" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"><properties>
+<property id="1643" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1644" name="Param_19" description="" precision="0" scale="0" length="100" dataType="str" codePage="1252"><properties>
+<property id="1645" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1646" name="Param_20" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"><properties>
+<property id="1647" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">65</property></properties></externalMetadataColumn>
+<externalMetadataColumn id="1648" name="Param_21" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"><properties>
+<property id="1649" name="DBParamInfoFlags" dataType="System.Int32" state="default" isArray="false" description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">17</property></properties></externalMetadataColumn></externalMetadataColumns></input>
+</inputs>
+<outputs>
+<output id="1601" name="OLE DB Command Output" description="" exclusionGroup="1" synchronousInputId="1600" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="false" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><externalMetadataColumns isUsed="False"/></output>
+<output id="1602" name="OLE DB Command Error Output" description="" exclusionGroup="1" synchronousInputId="1600" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="true" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><outputColumns>
+<outputColumn id="1603" name="ErrorCode" description="" lineageId="1603" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="1" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="1604" name="ErrorColumn" description="" lineageId="1604" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="2" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/></outputColumns><externalMetadataColumns isUsed="False"/></output>
+</outputs>
+</component>
+</components>
+<paths>
+<path id="1129" name="Derived Column Output" description="" startId="1124" endId="1012"/>
+<path id="1409" name="OLE DB Source Output" description="" startId="11" endId="1123"/>
+<path id="1548" name="New Output" description="" startId="1014" endId="1544"/>
+<path id="1605" name="Changing Attribute Updates Output" description="" startId="1016" endId="1600"/>
+</paths></pipeline></DTS:ObjectData></DTS:Executable>
+<DTS:Executable DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" DTS:ThreadHint="0"><DTS:Property DTS:Name="ExecutionLocation">0</DTS:Property><DTS:Property DTS:Name="ExecutionAddress"></DTS:Property><DTS:Property DTS:Name="TaskContact">Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1</DTS:Property><DTS:Property DTS:Name="ForceExecValue">0</DTS:Property><DTS:Property DTS:Name="ExecValue" DTS:DataType="3">0</DTS:Property><DTS:Property DTS:Name="ForceExecutionResult">-1</DTS:Property><DTS:Property DTS:Name="Disabled">0</DTS:Property><DTS:Property DTS:Name="FailPackageOnFailure">0</DTS:Property><DTS:Property DTS:Name="FailParentOnFailure">0</DTS:Property><DTS:Property DTS:Name="MaxErrorCount">1</DTS:Property><DTS:Property DTS:Name="ISOLevel">1048576</DTS:Property><DTS:Property DTS:Name="LocaleID">-1</DTS:Property><DTS:Property DTS:Name="TransactionOption">1</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property>
+<DTS:LoggingOptions><DTS:Property DTS:Name="LoggingMode">0</DTS:Property><DTS:Property DTS:Name="FilterKind">1</DTS:Property><DTS:Property DTS:Name="EventFilter" DTS:DataType="8"></DTS:Property></DTS:LoggingOptions><DTS:Property DTS:Name="ObjectName">Update LSET</DTS:Property><DTS:Property DTS:Name="DTSID">{7E8ED6A6-5186-4F64-9357-877CCF463A37}</DTS:Property><DTS:Property DTS:Name="Description">Execute SQL Task</DTS:Property><DTS:Property DTS:Name="CreationName">Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</DTS:Property><DTS:Property DTS:Name="DisableEventHandlers">0</DTS:Property><DTS:ObjectData><SQLTask:SqlTaskData SQLTask:Connection="{06A7CB12-8128-4EFE-B427-AD787EFD9E69}" SQLTask:TimeOut="0" SQLTask:IsStoredProc="False" SQLTask:SqlStmtSourceType="DirectInput" SQLTask:SqlStatementSource="update meta.dbo.data_flow set LSET = CET &#xA;where name = 'dds_store'" SQLTask:ResultType="ResultSetType_None" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask"/></DTS:ObjectData></DTS:Executable>
+<DTS:PrecedenceConstraint><DTS:Property DTS:Name="Value">0</DTS:Property><DTS:Property DTS:Name="EvalOp">2</DTS:Property><DTS:Property DTS:Name="LogicalAnd">-1</DTS:Property><DTS:Property DTS:Name="Expression"></DTS:Property><DTS:Executable IDREF="{00B1166C-EB5E-4BE0-BE6A-2A23CE2A45D0}" DTS:IsFrom="-1"/><DTS:Executable IDREF="{CE8168D1-4A6D-49A0-995C-D25BE0578E2F}" DTS:IsFrom="0"/><DTS:Property DTS:Name="ObjectName">Constraint</DTS:Property><DTS:Property DTS:Name="DTSID">{2FCC1EE8-0EA5-4AA8-9135-6A78F77358B2}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PrecedenceConstraint>
+<DTS:PrecedenceConstraint><DTS:Property DTS:Name="Value">0</DTS:Property><DTS:Property DTS:Name="EvalOp">2</DTS:Property><DTS:Property DTS:Name="LogicalAnd">-1</DTS:Property><DTS:Property DTS:Name="Expression"></DTS:Property><DTS:Executable IDREF="{CE8168D1-4A6D-49A0-995C-D25BE0578E2F}" DTS:IsFrom="-1"/><DTS:Executable IDREF="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}" DTS:IsFrom="0"/><DTS:Property DTS:Name="ObjectName">Constraint 1</DTS:Property><DTS:Property DTS:Name="DTSID">{BD7CC692-9FFC-4732-9F9A-4AB8A9EEF126}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PrecedenceConstraint>
+<DTS:PrecedenceConstraint><DTS:Property DTS:Name="Value">0</DTS:Property><DTS:Property DTS:Name="EvalOp">2</DTS:Property><DTS:Property DTS:Name="LogicalAnd">-1</DTS:Property><DTS:Property DTS:Name="Expression"></DTS:Property><DTS:Executable IDREF="{C577EF8B-6FF2-4574-8A01-2CCDE878D443}" DTS:IsFrom="-1"/><DTS:Executable IDREF="{7E8ED6A6-5186-4F64-9357-877CCF463A37}" DTS:IsFrom="0"/><DTS:Property DTS:Name="ObjectName">Constraint 2</DTS:Property><DTS:Property DTS:Name="DTSID">{8DDCEDDF-B8F1-4B15-9E57-74BDA8D7EC9F}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PrecedenceConstraint><DTS:Property DTS:Name="ObjectName">DDS store</DTS:Property><DTS:Property DTS:Name="DTSID">{784FC651-713F-425D-BFC7-FAC87B05AFBB}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName">MSDTS.Package.1</DTS:Property><DTS:Property DTS:Name="DisableEventHandlers">0</DTS:Property></DTS:Executable>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTransformationsUserConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Jade</Id>
+            <Name>Jade</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuqgtWoPYWkOrduEwnhtj2QAAAAAKAAAASgBhAGQAZQAAAANmAACoAAAAEAAAAL2i/MdLQg06k6ZvLOAqUCcAAAAABIAAAKAAAAAQAAAAvxyJuLXiRmpgrRkNpKvFfwgAAACGYuF4VMtUhxQAAADu1DZd9teFTlM804hbBZbtqkOqmw==</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Stage</Id>
+            <Name>Stage</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuqgtWoPYWkOrduEwnhtj2QAAAAAMAAAAUwB0AGEAZwBlAAAAA2YAAKgAAAAQAAAASQ/Nc6b9UqFSAGQsQARhhgAAAAAEgAAAoAAAABAAAACEqEocqjWJzXQcn5nYr4/SCAAAAAw6UP6IksvTFAAAACNfvN6iD5dKth8/lw8fIGE6M6Qz</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Meta</Id>
+            <Name>Meta</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuqgtWoPYWkOrduEwnhtj2QAAAAAKAAAATQBlAHQAYQAAAANmAACoAAAAEAAAABFn+2kmmGIKY2mrxwjZ3YIAAAAABIAAAKAAAAAQAAAAhnRL4c22ztLEX1MluvMGxAgAAAAXi0ByQhgQtBQAAACggZr38QGRYMEvioB25N0b7/k9Vg==</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Jade</Id>
+            <Name>Jade</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuqgtWoPYWkOrduEwnhtj2QAAAAAKAAAASgBhAGQAZQAAAANmAACoAAAAEAAAAAQYrF7CeRC6L90wUcCA4Y4AAAAABIAAAKAAAAAQAAAAnAYTTGfo/oCulP+lbAFJaggAAABnuLUSxpJNrxQAAAAqBGYlgCNhjl3rjSWCfwk8p1u21A==</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Stage</Id>
+            <Name>Stage</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuqgtWoPYWkOrduEwnhtj2QAAAAAMAAAAUwB0AGEAZwBlAAAAA2YAAKgAAAAQAAAAGyE223w/2RlCb2VDX2EN0gAAAAAEgAAAoAAAABAAAABSZTPde/CN8oDx1XSu142ICAAAAAYVYPGMc0W2FAAAAGfpPhVCeYFGWegNZPMaB+2xL2ek</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Meta</Id>
+            <Name>Meta</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuqgtWoPYWkOrduEwnhtj2QAAAAAKAAAATQBlAHQAYQAAAANmAACoAAAAEAAAAGiUGhW4+0rRZZEdMOmFHEgAAAAABIAAAKAAAAAQAAAA43L5mZdjc7BucRzNnDZRWwgAAABwzLtWOcnxhRQAAABmf404CgCqIJef+0NIFX4IoXHHZg==</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <OfflineMode>false</OfflineMode>
+      </Options>
+    </Configuration>
+  </Configurations>
+</DataTransformationsUserConfiguration>

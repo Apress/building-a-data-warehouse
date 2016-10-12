@@ -1,0 +1,68 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Amadeus Entertainment</Database>
+    <Server>VIVA2</Server>
+    <ConnectionString>DataSource=VIVA2;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>QLTo6L7qcyQ2Npp+54Gpnw==08/05/2007 21:03:2408/05/2007 21:00:04</TimeStamp>
+        <ID>
+          <String>DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>+qybwfYtyKxIkKlmtCr5ig==08/05/2007 21:01:3408/05/2007 21:01:33</TimeStamp>
+        <ID>
+          <String>DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>j+Z6DP05/nelGx9g7dZEcg==08/05/2007 21:02:3608/05/2007 21:02:12</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>R8A/X4lgvSd9hXuu8Rfbww==08/05/2007 21:02:3408/05/2007 21:02:12</TimeStamp>
+        <ID>
+          <String>Dim Product</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>6LRUmSFCDloRrlGTFS0v+Q==08/05/2007 21:02:3608/05/2007 21:02:12kYwQIZ1tcPxAM58mOvO8Rg==08/05/2007 21:02:3608/05/2007 21:02:12</TimeStamp>
+        <ID>
+          <String>DDS</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>NiPBJxeb2SUevVhd8j/K9Q==08/05/2007 07:33:1608/05/2007 07:33:13</TimeStamp>
+      <ID>
+        <String>Amadeus Entertainment</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2007-05-08T20:03:38Z</LastDeployed>
+</DeploymentSnapshot>

@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Amadeus Analysis Services</Database>
+    <Server>localhost</Server>
+    <ConnectionString>DataSource=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>I+QmHHUUwyG6Ouza4XnauQ==20/05/2007 19:29:2020/05/2007 16:26:50</TimeStamp>
+        <ID>
+          <String>DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>hnjJd2HrZbK/lldPm1Y7vg==02/06/2007 15:28:2620/05/2007 16:27:25</TimeStamp>
+        <ID>
+          <String>DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>vsFUxaaMKWwVrg72J0wlvQ==04/08/2007 16:44:2220/05/2007 16:28:18</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Q4TtfJfg9a0BootkVRBuuw==20/05/2007 16:28:4420/05/2007 16:28:18</TimeStamp>
+        <ID>
+          <String>Dim Product</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Fgl2PUeNmmPl41+FATseYg==20/05/2007 16:28:4420/05/2007 16:28:19</TimeStamp>
+        <ID>
+          <String>Dim Store</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>AXiO7SJAALk4R+LdWjathA==02/06/2007 10:22:3002/06/2007 10:15:24</TimeStamp>
+        <ID>
+          <String>Dim Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>U7p4rWM0GlONrnvsVT0oiA==04/08/2007 16:44:2220/05/2007 16:28:19w1YqwuwtOXondd1bHmNMvQ==20/05/2007 16:28:4420/05/2007 16:28:19</TimeStamp>
+        <ID>
+          <String>DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>GVwp6O+HEG6aIuYTN4z0aQ==03/06/2007 01:42:0002/06/2007 15:32:16</TimeStamp>
+        <ID>
+          <String>Purchase Pattern2</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>B9KxNpuQMVzgwV5/Qid8QA==20/05/2007 19:25:1420/05/2007 16:26:23</TimeStamp>
+      <ID>
+        <String>Amadeus Analysis Services</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2007-08-04T15:45:12Z</LastDeployed>
+</DeploymentSnapshot>

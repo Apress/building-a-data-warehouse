@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Amadeus Entertainment", "Amadeus Entertainment\Amadeus Entertainment.dwproj", "{B05CD7C2-C0FD-4EE2-A1EF-18A350957BA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B05CD7C2-C0FD-4EE2-A1EF-18A350957BA2}.Development|Default.ActiveCfg = Development
+		{B05CD7C2-C0FD-4EE2-A1EF-18A350957BA2}.Development|Default.Build.0 = Development
+		{B05CD7C2-C0FD-4EE2-A1EF-18A350957BA2}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

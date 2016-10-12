@@ -1,0 +1,13 @@
+﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="417bcb38-177e-47b5-80f9-42d6de5b54b3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DDS</ID>
+  <Name>DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <ConnectionString>Provider=SQLOLEDB.1;Data Source=VIVA2;Persist Security Info=True;Password=;User ID=;Initial Catalog=DDS</ConnectionString>
+  <ConnectionStringSecurity>PasswordRemoved</ConnectionStringSecurity>
+  <ImpersonationInfo>
+    <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </ImpersonationInfo>
+  <Timeout>PT0S</Timeout>
+</DataSource>

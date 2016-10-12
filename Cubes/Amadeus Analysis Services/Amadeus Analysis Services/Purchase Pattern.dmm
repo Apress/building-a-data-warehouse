@@ -1,0 +1,240 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f3e852dd-893e-4eba-9d9e-990913fbe957" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Purchase Pattern2</ID>
+  <Name>Purchase Pattern</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_dm_purchase_pattern</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8640" scrolltop="-5147" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="20320" y="14288" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dm_purchase_pattern (dbo.dm_purchase_pattern)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dm_purchase_pattern" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-8640</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5147</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="79fc9598-e3a1-4ad4-8801-2a4c023a171a">
+    <DataSourceViewID>DDS</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="bbcb3933-5fb7-4c17-8469-30c661e8d82f">
+      <ID>Customer Key</ID>
+      <Name>Customer Key</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15550915-3e28-4420-be21-a6f5d8da0d12">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="09af0e85-8062-473c-ba87-5358593ccc38">
+            <TableID>dbo_dm_purchase_pattern</TableID>
+            <ColumnID>customer_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="fbdc9897-562e-4748-904e-a6369feb3ff5">
+      <ID>Gender</ID>
+      <Name>Gender</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f1282c70-cfeb-4b53-88a6-d41f5a9988d8">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="081112ac-117f-49cb-ac18-531c557f9470">
+            <TableID>dbo_dm_purchase_pattern</TableID>
+            <ColumnID>gender</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="967c457f-2fb0-4431-8158-0496d77c862a">
+      <ID>Interest</ID>
+      <Name>Interest</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5f892bd1-15c3-4b6d-bec9-5128b9007d19">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f6aaf8b5-5afd-49a5-b8db-baf3ca5626c9">
+            <TableID>dbo_dm_purchase_pattern</TableID>
+            <ColumnID>interest</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="2225c54f-f65e-46a7-b5b2-df4cb0cbead6">
+      <ID>Music</ID>
+      <Name>Music</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cb7bdaff-a91f-4dbb-894d-870574785c05">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="161213c0-10ee-4979-a207-bc913d7da94c">
+            <TableID>dbo_dm_purchase_pattern</TableID>
+            <ColumnID>music</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ed85400e-f7f6-4b8d-86a4-01e701d6fe91">
+      <ID>Occupation</ID>
+      <Name>Occupation</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="991f6d89-f21c-4af6-9427-a620cf0b970e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1ddc16ab-2f56-47f4-8632-9697848d6f7b">
+            <TableID>dbo_dm_purchase_pattern</TableID>
+            <ColumnID>occupation</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="c3120f9a-7bd8-4748-8c57-e21e49c9eaa8">
+      <ID>Decision Trees</ID>
+      <Name>Decision Trees</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="373ecd98-0097-4df0-9bc8-df4808b7fcab">
+          <ID>Customer Key</ID>
+          <Name>Customer Key</Name>
+          <SourceColumnID>Customer Key</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="463ef70b-8950-45b7-8f1d-536692c5e3db">
+          <ID>Gender</ID>
+          <Name>Gender</Name>
+          <SourceColumnID>Gender</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="655557d9-ae04-400b-b512-8f745bb62ba8">
+          <ID>Interest</ID>
+          <Name>Interest</Name>
+          <SourceColumnID>Interest</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5379fed0-8948-47b9-a432-1873e57edbc8">
+          <ID>Music</ID>
+          <Name>Music</Name>
+          <SourceColumnID>Music</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="cdc7df46-7436-4632-8281-ca6a9b4b5bd8">
+          <ID>Occupation</ID>
+          <Name>Occupation</Name>
+          <SourceColumnID>Occupation</SourceColumnID>
+        </Column>
+      </Columns>
+      <AllowDrillThrough>true</AllowDrillThrough>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="94d73bcc-b60e-49c3-8c38-fdb7606c7bf6">
+      <ID>Clustering</ID>
+      <Name>Clustering</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Clustering</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="6cde4af3-8de0-4730-82bc-be2268123854">
+          <ID>Customer Key</ID>
+          <Name>Customer Key</Name>
+          <SourceColumnID>Customer Key</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="29a9ca75-51f5-4913-b430-9b8b1a77d2c1">
+          <ID>Gender</ID>
+          <Name>Gender</Name>
+          <SourceColumnID>Gender</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="788be3e4-5207-41af-9bf2-a6928b81b8cd">
+          <ID>Interest</ID>
+          <Name>Interest</Name>
+          <SourceColumnID>Interest</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="fe1baaa8-8756-4630-9ede-b4510b961621">
+          <ID>Music</ID>
+          <Name>Music</Name>
+          <SourceColumnID>Music</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="9aebd593-f752-40de-95fb-944e79321bd1">
+          <ID>Occupation</ID>
+          <Name>Occupation</Name>
+          <SourceColumnID>Occupation</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+</MiningStructure>

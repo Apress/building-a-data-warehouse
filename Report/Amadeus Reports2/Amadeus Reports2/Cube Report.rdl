@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="Cubes">
+      <DataSourceReference>Cubes</DataSourceReference>
+      <rd:DataSourceID>711814b1-e91b-4582-a178-2791fc3bb48b</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <ReportParameters>
+    <ReportParameter Name="DimDateYear">
+      <DataType>String</DataType>
+      <Prompt>Year</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DimDateYear</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaption</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="DimDateQuarter">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Dim Date].[Quarter].&amp;[Q1]</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Quarter</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DimDateQuarter</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaption</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>1.5cm</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>3.5cm</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="Product_Type">
+                  <rd:DefaultName>Product_Type</rd:DefaultName>
+                  <ZIndex>1</ZIndex>
+                  <Style>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!Product_Type.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Grouping Name="matrix1_Product_Type">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Product_Type.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <DynamicColumns>
+              <ReportItems>
+                <Textbox Name="week_number">
+                  <rd:DefaultName>week_number</rd:DefaultName>
+                  <ZIndex>2</ZIndex>
+                  <Style>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!week_number.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Grouping Name="matrix1_week_number">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!week_number.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicColumns>
+            <Height>0.63492cm</Height>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <DataSetName>dsCube</DataSetName>
+        <Width>5cm</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox1">
+              <rd:DefaultName>textbox1</rd:DefaultName>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingBottom>2pt</PaddingBottom>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+              </Style>
+              <CanGrow>true</CanGrow>
+              <Value />
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <Height>1.26984cm</Height>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.63492cm</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="Sales_Value">
+                    <rd:DefaultName>Sales_Value</rd:DefaultName>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=Sum(Fields!Sales_Value.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+    </ReportItems>
+    <Height>5cm</Height>
+  </Body>
+  <rd:ReportID>77578bb7-60e4-48b1-bd98-5ad1f29ceb68</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="dsCube">
+      <Query>
+        <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
+        <CommandText> SELECT NON EMPTY { [Measures].[Sales Value] } ON COLUMNS, NON EMPTY { ([Dim Product].[Product Type].[Product Type].ALLMEMBERS * [Dim Date].[week_number].[week_number].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@DimDateQuarter, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimDateYear, CONSTRAINED) ) ON COLUMNS FROM [DDS])) WHERE ( IIF( STRTOSET(@DimDateYear, CONSTRAINED).Count = 1, STRTOSET(@DimDateYear, CONSTRAINED), [Dim Date].[Year].currentmember ), IIF( STRTOSET(@DimDateQuarter, CONSTRAINED).Count = 1, STRTOSET(@DimDateQuarter, CONSTRAINED), [Dim Date].[Quarter].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="DimDateYear">
+            <Value>=Parameters!DimDateYear.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DimDateQuarter">
+            <Value>=Parameters!DimDateQuarter.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <DataSourceName>Cubes</DataSourceName>
+        <rd:MdxQuery><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Dim Product</DimensionName><HierarchyName>Product Type</HierarchyName><HierarchyUniqueName>[Dim Product].[Product Type]</HierarchyUniqueName><LevelName>Product Type</LevelName><UniqueName>[Dim Product].[Product Type].[Product Type]</UniqueName></ID><ItemCaption>Product Type</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Date</DimensionName><HierarchyName>week_number</HierarchyName><HierarchyUniqueName>[Dim Date].[week_number]</HierarchyUniqueName><LevelName>week_number</LevelName><UniqueName>[Dim Date].[week_number].[week_number]</UniqueName></ID><ItemCaption>week_number</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Sales Value</MeasureName><UniqueName>[Measures].[Sales Value]</UniqueName></ID><ItemCaption>Sales Value</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><From>DDS</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Dim Date].[Year]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Dim Date].[Year].&amp;[2007]</MemberUniqueName></Member></Members><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Dim Date].[Quarter]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Dim Date].[Quarter].&amp;[Q1]</MemberUniqueName></Member></Members><Parametrized>true</Parametrized></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Sales Value] } ON COLUMNS, NON EMPTY { ([Dim Product].[Product Type].[Product Type].ALLMEMBERS * [Dim Date].[week_number].[week_number].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@DimDateQuarter, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimDateYear, CONSTRAINED) ) ON COLUMNS FROM [DDS])) WHERE ( IIF( STRTOSET(@DimDateYear, CONSTRAINED).Count = 1, STRTOSET(@DimDateYear, CONSTRAINED), [Dim Date].[Year].currentmember ), IIF( STRTOSET(@DimDateQuarter, CONSTRAINED).Count = 1, STRTOSET(@DimDateQuarter, CONSTRAINED), [Dim Date].[Quarter].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>DimDateYear</Name><DefaultValues><DefaultValue>[Dim Date].[Year].&amp;[2007]</DefaultValue></DefaultValues><Caption>Year</Caption><HierarchyUniqueName>[Dim Date].[Year]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Date].[Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Date].[Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Date].[Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Date].[Year].ALLMEMBERS ON ROWS FROM [DDS]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>DimDateQuarter</Name><DefaultValues><DefaultValue>[Dim Date].[Quarter].&amp;[Q1]</DefaultValue></DefaultValues><Caption>Quarter</Caption><HierarchyUniqueName>[Dim Date].[Quarter]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Date].[Quarter].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Date].[Quarter].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Date].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Date].[Quarter].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimDateYear, CONSTRAINED) ) ON COLUMNS FROM [DDS])</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Date].[Quarter].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Date].[Quarter].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Date].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Date].[Quarter].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimDateYear, CONSTRAINED) ) ON COLUMNS FROM [DDS])</Statement><ReferencedParameters><ReferencedParameter><Name>DimDateYear</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:MdxQuery>
+      </Query>
+      <Fields>
+        <Field Name="Product_Type">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Product].[Product Type].[Product Type]" /&gt;</DataField>
+        </Field>
+        <Field Name="week_number">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Date].[week_number].[week_number]" /&gt;</DataField>
+        </Field>
+        <Field Name="Sales_Value">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sales Value]" /&gt;</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DimDateYear">
+      <Query>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Date].[Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Date].[Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Date].[Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Date].[Year].ALLMEMBERS ON ROWS FROM [DDS]</CommandText>
+        <DataSourceName>Cubes</DataSourceName>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:MdxQuery><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>DDS</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Date].[Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Date].[Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Date].[Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Date].[Year].ALLMEMBERS ON ROWS FROM [DDS]</Statement></Query></QueryDefinition></rd:MdxQuery>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DimDateQuarter">
+      <Query>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Date].[Quarter].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Date].[Quarter].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Date].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Date].[Quarter].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimDateYear, CONSTRAINED) ) ON COLUMNS FROM [DDS])</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="DimDateYear">
+            <Value>=Parameters!DimDateYear.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <DataSourceName>Cubes</DataSourceName>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:MdxQuery><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>DDS</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Date].[Quarter].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Date].[Quarter].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Date].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Date].[Quarter].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimDateYear, CONSTRAINED) ) ON COLUMNS FROM [DDS])</Statement><ParameterDefinitions><ParameterDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><Name>DimDateYear</Name><DefaultValues><DefaultValue>[Dim Date].[Year].&amp;[2007]</DefaultValue></DefaultValues><Caption>Year</Caption><HierarchyUniqueName>[Dim Date].[Year]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Date].[Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Date].[Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Date].[Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Date].[Year].ALLMEMBERS ON ROWS FROM [DDS]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:MdxQuery>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>16cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

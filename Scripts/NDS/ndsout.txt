@@ -1,0 +1,119 @@
+Changed database context to 'master'.
+Msg 3702, Level 16, State 4, Server VIVA2, Line 3
+Cannot drop database "NDS" because it is currently in use.
+Msg 1801, Level 16, State 3, Server VIVA2, Line 2
+Database 'NDS' already exists.
+contact                                  
+Changed database context to 'NDS'.
+supplier_status                          
+Changed database context to 'NDS'.
+artist                                   
+Changed database context to 'NDS'.
+product_status                           
+Changed database context to 'NDS'.
+product_category                         
+Changed database context to 'NDS'.
+product_type                             
+Changed database context to 'NDS'.
+country                                  
+Changed database context to 'NDS'.
+state                                    
+Changed database context to 'NDS'.
+city                                     
+Changed database context to 'NDS'.
+address                                  
+Changed database context to 'NDS'.
+address_type                             
+Changed database context to 'NDS'.
+phone_number                             
+Changed database context to 'NDS'.
+phone_number_type                        
+Changed database context to 'NDS'.
+email_address                            
+Changed database context to 'NDS'.
+email_address_type                       
+Changed database context to 'NDS'.
+currency                                 
+Changed database context to 'NDS'.
+currency rate                            
+Changed database context to 'NDS'.
+media                                    
+Changed database context to 'NDS'.
+format                                   
+Changed database context to 'NDS'.
+package_type                             
+Changed database context to 'NDS'.
+package                                  
+Changed database context to 'NDS'.
+lead                                     
+Changed database context to 'NDS'.
+store_type                               
+Changed database context to 'NDS'.
+division                                 
+Changed database context to 'NDS'.
+region                                   
+Changed database context to 'NDS'.
+occupation                               
+Changed database context to 'NDS'.
+subscriber_band                          
+Changed database context to 'NDS'.
+subscriber_classs                        
+Changed database context to 'NDS'.
+household_income                         
+Changed database context to 'NDS'.
+interest                                 
+Changed database context to 'NDS'.
+permission                               
+Changed database context to 'NDS'.
+customer_status                          
+Changed database context to 'NDS'.
+customer_type                            
+Changed database context to 'NDS'.
+subscription_status                      
+Changed database context to 'NDS'.
+business_unit                            
+Changed database context to 'NDS'.
+communication_category                   
+Changed database context to 'NDS'.
+language                                 
+Changed database context to 'NDS'.
+campaign                                 
+Changed database context to 'NDS'.
+delivery_status_category                 
+Changed database context to 'NDS'.
+delivery_status                          
+Changed database context to 'NDS'.
+store                                    
+Changed database context to 'NDS'.
+supplier                                 
+Changed database context to 'NDS'.
+product                                  
+Changed database context to 'NDS'.
+channel                                  
+Changed database context to 'NDS'.
+communication                            
+Changed database context to 'NDS'.
+customer                                 
+Changed database context to 'NDS'.
+communication_subscription               
+Changed database context to 'NDS'.
+campaign_result                          
+Changed database context to 'NDS'.
+supplier_performance                     
+Changed database context to 'NDS'.
+subscription_sales                       
+Changed database context to 'NDS'.
+order_header                             
+Changed database context to 'NDS'.
+order_item                               
+Changed database context to 'NDS'.
+address_junction                         
+Changed database context to 'NDS'.
+phone_number_junction                    
+Changed database context to 'NDS'.
+email_address_junction                   
+Changed database context to 'NDS'.
+interest_junction                        
+Changed database context to 'NDS'.
+channel_junction                         
+Changed database context to 'NDS'.

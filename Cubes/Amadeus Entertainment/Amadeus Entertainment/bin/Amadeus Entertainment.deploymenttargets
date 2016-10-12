@@ -1,0 +1,5 @@
+﻿<DeploymentTarget xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Database>Amadeus Entertainment</Database>
+  <Server>VIVA2</Server>
+  <ConnectionString>DataSource=VIVA2;Timeout=0</ConnectionString>
+</DeploymentTarget>

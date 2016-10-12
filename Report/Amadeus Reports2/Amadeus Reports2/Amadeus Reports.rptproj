@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmR3ZD0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9EYXRhV2FyZWhvdXNlL0Rlc2lnbmVyLzEuMCI+DQogIDxFbmFibGVkPmZhbHNlPC9FbmFibGVkPg0KICA8UHJvamVjdE5hbWU+PC9Qcm9qZWN0TmFtZT4NCiAgPEF1eFBhdGg+PC9BdXhQYXRoPg0KICA8TG9jYWxQYXRoPjwvTG9jYWxQYXRoPg0KICA8UHJvdmlkZXI+PC9Qcm92aWRlcj4NCjwvU291cmNlQ29udHJvbEluZm8+</State>
+  <DataSources>
+    <ProjectItem>
+      <Name>Cubes.rds</Name>
+      <FullPath>Cubes.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DDS.rds</Name>
+      <FullPath>DDS.rds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <Reports>
+    <ProjectItem>
+      <Name>Amadeus Entertainment Product Sales.rdl</Name>
+      <FullPath>Amadeus Entertainment Product Sales.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Cube Report.rdl</Name>
+      <FullPath>Cube Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Store Details.rdl</Name>
+      <FullPath>Store Details.rdl</FullPath>
+    </ProjectItem>
+  </Reports>
+  <Configurations>
+    <Configuration>
+      <Name>Debug</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetServerURL>http://localhost/ReportServer</TargetServerURL>
+        <TargetFolder>Amadeus Reports</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+        <StartItem>Amadeus Entertainment Product Sales.rdl</StartItem>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>DebugLocal</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetFolder>Amadeus Reports2</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Production</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetFolder>Amadeus Reports2</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

@@ -1,0 +1,11 @@
+﻿<DeploymentOptions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <TransactionalDeployment>false</TransactionalDeployment>
+  <PartitionDeployment>DeployPartitions</PartitionDeployment>
+  <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+  <ProcessingOption>Default</ProcessingOption>
+  <OutputScript></OutputScript>
+  <ImpactAnalysisFile></ImpactAnalysisFile>
+  <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+  <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+  <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+</DeploymentOptions>

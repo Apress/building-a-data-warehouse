@@ -1,0 +1,3787 @@
+﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Amadeus Analysis Services</ID>
+  <Name>Amadeus Analysis Services</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
+  <DataSourceImpersonationInfo>
+    <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
+    <Account>ETL</Account>
+    <ImpersonationInfoSecurity>PasswordRemoved</ImpersonationInfoSecurity>
+  </DataSourceImpersonationInfo>
+  <Dimensions>
+    <Dimension>
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1383" scrolltop="-4696" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6668" y="14393" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_date (dbo.dim_date)" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3863" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="00080000170f000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_dim_date" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-1383</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-4696</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DDS</DataSourceViewID>
+      </Source>
+      <Type>Time</Type>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Year</ID>
+          <Name>Year</Name>
+          <Type>Years</Type>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_date</TableID>
+                <ColumnID>year</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>-1</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_dim_date</TableID>
+              <ColumnID>year</ColumnID>
+            </Source>
+          </NameColumn>
+          <OrderBy>Key</OrderBy>
+        </Attribute>
+        <Attribute>
+          <ID>Quarter</ID>
+          <Name>Quarter</Name>
+          <Type>Quarters</Type>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>2</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_date</TableID>
+                <ColumnID>quarter</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>2</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_dim_date</TableID>
+              <ColumnID>quarter</ColumnID>
+            </Source>
+          </NameColumn>
+          <OrderBy>Key</OrderBy>
+        </Attribute>
+        <Attribute>
+          <ID>Week</ID>
+          <Name>week_number</Name>
+          <Type>Weeks</Type>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>UnsignedTinyInt</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_date</TableID>
+                <ColumnID>week_number</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>-1</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_dim_date</TableID>
+              <ColumnID>week_number</ColumnID>
+            </Source>
+          </NameColumn>
+          <OrderBy>Key</OrderBy>
+        </Attribute>
+        <Attribute>
+          <ID>date_key</ID>
+          <Name>date_key</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_date</TableID>
+                <ColumnID>date_key</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>-1</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_dim_date</TableID>
+              <ColumnID>date_key</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Year</AttributeID>
+              <Name>Year</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Quarter</AttributeID>
+              <Name>Quarter</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Week</AttributeID>
+              <Name>week_number</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Month</AttributeID>
+              <Name>Month</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+        </Attribute>
+        <Attribute>
+          <ID>Month</ID>
+          <Name>Month</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>UnsignedTinyInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_date</TableID>
+                <ColumnID>month</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Year -  Quarter</ID>
+          <Name>Year -  Quarter</Name>
+          <Levels>
+            <Level>
+              <ID>Year</ID>
+              <Name>Year</Name>
+              <SourceAttributeID>Year</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Quarter</ID>
+              <Name>Quarter</Name>
+              <SourceAttributeID>Quarter</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+        <Hierarchy>
+          <ID>Year -  week_number</ID>
+          <Name>Year -  week_number</Name>
+          <Levels>
+            <Level>
+              <ID>Year</ID>
+              <Name>Year</Name>
+              <SourceAttributeID>Year</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>week_number</ID>
+              <Name>week_number</Name>
+              <SourceAttributeID>Week</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+        <Hierarchy>
+          <ID>Hierarchy</ID>
+          <Name>Year - Month</Name>
+          <Levels>
+            <Level>
+              <ID>Year</ID>
+              <Name>Year</Name>
+              <SourceAttributeID>Year</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Month</ID>
+              <Name>Month</Name>
+              <SourceAttributeID>Month</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Product</ID>
+      <Name>Dim Product</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DDS</DataSourceViewID>
+      </Source>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Dim Product</ID>
+          <Name>Dim Product</Name>
+          <Usage>Key</Usage>
+          <EstimatedCount>2459</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>product_key</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>100</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_dim_product</TableID>
+              <ColumnID>title</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Product Code</AttributeID>
+              <Name>Product Code</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Name</AttributeID>
+              <Name>Name_</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Description</AttributeID>
+              <Name>Description</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Artist</AttributeID>
+              <Name>Artist</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Product Type</AttributeID>
+              <Name>Product Type</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Product Category</AttributeID>
+              <Name>Product Category</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Format</AttributeID>
+              <Name>Format</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Media</AttributeID>
+              <Name>Media</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Unit Price</AttributeID>
+              <Name>Unit Price</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Unit Cost</AttributeID>
+              <Name>Unit Cost</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Status</AttributeID>
+              <Name>Status</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Source System Code</AttributeID>
+              <Name>Source System Code</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Create Timestamp</AttributeID>
+              <Name>Create Timestamp</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Update Timestamp</AttributeID>
+              <Name>Update Timestamp</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <InstanceSelection>FilteredList</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Product Code</ID>
+          <Name>Product Code</Name>
+          <EstimatedCount>2459</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>10</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>product_code</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>FilteredList</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Name</ID>
+          <Name>Name</Name>
+          <EstimatedCount>2459</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>name</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>FilteredList</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Description</ID>
+          <Name>Description</Name>
+          <EstimatedCount>2459</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>100</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>description</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>FilteredList</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Artist</ID>
+          <Name>Artist</Name>
+          <EstimatedCount>568</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>100</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>artist</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>FilteredList</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Product Type</ID>
+          <Name>Product Type</Name>
+          <EstimatedCount>65</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>20</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>product_type</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Product Category</ID>
+          <Name>Product Category</Name>
+          <EstimatedCount>4</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>30</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>product_category</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Format</ID>
+          <Name>Format</Name>
+          <EstimatedCount>28</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>30</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>format</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Media</ID>
+          <Name>Media</Name>
+          <EstimatedCount>6</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>15</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>media</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Unit Price</ID>
+          <Name>Unit Price</Name>
+          <EstimatedCount>102</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>unit_price</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>List</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Unit Cost</ID>
+          <Name>Unit Cost</Name>
+          <EstimatedCount>29</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>unit_cost</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Status</ID>
+          <Name>Status</Name>
+          <EstimatedCount>5</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>15</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>status</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Source System Code</ID>
+          <Name>Source System Code</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>UnsignedTinyInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>source_system_code</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Create Timestamp</ID>
+          <Name>Create Timestamp</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>create_timestamp</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Update Timestamp</ID>
+          <Name>Update Timestamp</Name>
+          <EstimatedCount>1</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_product</TableID>
+                <ColumnID>update_timestamp</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Product Category - Product Type</ID>
+          <Name>Product Category - Product Type</Name>
+          <Levels>
+            <Level>
+              <ID>Product Category</ID>
+              <Name>Product Category</Name>
+              <SourceAttributeID>Product Category</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Product Type</ID>
+              <Name>Product Type</Name>
+              <SourceAttributeID>Product Type</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Dim Product</ID>
+              <Name>Dim Product</Name>
+              <SourceAttributeID>Dim Product</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+        <Hierarchy>
+          <ID>Media - Unit Cost</ID>
+          <Name>Media - Unit Cost</Name>
+          <Levels>
+            <Level>
+              <ID>Media</ID>
+              <Name>Media</Name>
+              <SourceAttributeID>Media</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Unit Cost</ID>
+              <Name>Unit Cost</Name>
+              <SourceAttributeID>Unit Cost</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Dim Product</ID>
+              <Name>Dim Product</Name>
+              <SourceAttributeID>Dim Product</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Store</ID>
+      <Name>Dim Store</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DDS</DataSourceViewID>
+      </Source>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Dim Store</ID>
+          <Name>Dim Store</Name>
+          <Usage>Key</Usage>
+          <EstimatedCount>103</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>store_key</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Store Number</AttributeID>
+              <Name>Store Number</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Store Name</AttributeID>
+              <Name>Store Name</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Store Type</AttributeID>
+              <Name>Store Type</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Store Address1</AttributeID>
+              <Name>Store Address1</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Store Address2</AttributeID>
+              <Name>Store Address2</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Store Address3</AttributeID>
+              <Name>Store Address3</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Store Address4</AttributeID>
+              <Name>Store Address4</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>City</AttributeID>
+              <Name>City</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>State</AttributeID>
+              <Name>State</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Zipcode</AttributeID>
+              <Name>Zipcode</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Country</AttributeID>
+              <Name>Country</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Phone Number</AttributeID>
+              <Name>Phone Number</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Web Site</AttributeID>
+              <Name>Web Site</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Region</AttributeID>
+              <Name>Region</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Prior Region</AttributeID>
+              <Name>Prior Region</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Prior Region Date</AttributeID>
+              <Name>Prior Region Date</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Division</AttributeID>
+              <Name>Division</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Prior Division</AttributeID>
+              <Name>Prior Division</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Prior Division Date</AttributeID>
+              <Name>Prior Division Date</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Source System Code</AttributeID>
+              <Name>Source System Code</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Create Timestamp</AttributeID>
+              <Name>Create Timestamp</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Update Timestamp</AttributeID>
+              <Name>Update Timestamp</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>List</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Store Number</ID>
+          <Name>Store Number</Name>
+          <EstimatedCount>103</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>store_number</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>List</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Store Name</ID>
+          <Name>Store Name</Name>
+          <EstimatedCount>96</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>store_name</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Store Type</ID>
+          <Name>Store Type</Name>
+          <EstimatedCount>5</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>30</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>store_type</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Store Address1</ID>
+          <Name>Store Address1</Name>
+          <EstimatedCount>90</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>store_address1</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Store Address2</ID>
+          <Name>Store Address2</Name>
+          <EstimatedCount>92</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>store_address2</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Store Address3</ID>
+          <Name>Store Address3</Name>
+          <EstimatedCount>93</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>store_address3</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Store Address4</ID>
+          <Name>Store Address4</Name>
+          <EstimatedCount>3</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>store_address4</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>City</ID>
+          <Name>City</Name>
+          <EstimatedCount>96</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>city</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>State</ID>
+          <Name>State</Name>
+          <EstimatedCount>19</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>state</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Zipcode</ID>
+          <Name>Zipcode</Name>
+          <EstimatedCount>60</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>10</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>zipcode</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Country</ID>
+          <Name>Country</Name>
+          <EstimatedCount>9</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>country</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Phone Number</ID>
+          <Name>Phone Number</Name>
+          <EstimatedCount>103</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>20</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>phone_number</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>List</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Web Site</ID>
+          <Name>Web Site</Name>
+          <EstimatedCount>96</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>100</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>web_site</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Region</ID>
+          <Name>Region</Name>
+          <EstimatedCount>12</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>region</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Prior Region</ID>
+          <Name>Prior Region</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>prior_region</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Prior Region Date</ID>
+          <Name>Prior Region Date</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>prior_region_date</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Division</ID>
+          <Name>Division</Name>
+          <EstimatedCount>4</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>division</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Prior Division</ID>
+          <Name>Prior Division</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>prior_division</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Prior Division Date</ID>
+          <Name>Prior Division Date</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>prior_division_date</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Source System Code</ID>
+          <Name>Source System Code</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>UnsignedTinyInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>source_system_code</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Create Timestamp</ID>
+          <Name>Create Timestamp</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>create_timestamp</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Update Timestamp</ID>
+          <Name>Update Timestamp</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_store</TableID>
+                <ColumnID>update_timestamp</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Division - Region</ID>
+          <Name>Division - Region</Name>
+          <Levels>
+            <Level>
+              <ID>Division</ID>
+              <Name>Division</Name>
+              <SourceAttributeID>Division</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Region</ID>
+              <Name>Region</Name>
+              <SourceAttributeID>Region</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Dim Store</ID>
+              <Name>Dim Store</Name>
+              <SourceAttributeID>Dim Store</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Customer</ID>
+      <Name>Dim Customer</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1951" scrolltop="-4696" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7805" y="14393" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_customer (dbo.dim_customer)" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3863" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="00080000170f000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_dim_customer" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-1951</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-4696</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DDS</DataSourceViewID>
+      </Source>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Dim Customer</ID>
+          <Name>Dim Customer</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>customer_key</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Customer Id</AttributeID>
+              <Name>Customer Id</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Account Number</AttributeID>
+              <Name>Account Number</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Customer Type</AttributeID>
+              <Name>Customer Type</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Name</AttributeID>
+              <Name>Name_</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Gender</AttributeID>
+              <Name>Gender</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Email Address</AttributeID>
+              <Name>Email Address</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Date Of Birth</AttributeID>
+              <Name>Date Of Birth</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Address1</AttributeID>
+              <Name>Address1</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Address2</AttributeID>
+              <Name>Address2</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Address3</AttributeID>
+              <Name>Address3</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Address4</AttributeID>
+              <Name>Address4</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>City</AttributeID>
+              <Name>City</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>State</AttributeID>
+              <Name>State</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Zipcode</AttributeID>
+              <Name>Zipcode</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Country</AttributeID>
+              <Name>Country</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Phone Number</AttributeID>
+              <Name>Phone Number</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Occupation</AttributeID>
+              <Name>Occupation</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Household Income</AttributeID>
+              <Name>Household Income</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Date Registered</AttributeID>
+              <Name>Date Registered</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Status</AttributeID>
+              <Name>Status</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Subscriber Class</AttributeID>
+              <Name>Subscriber Class</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Subscriber Band</AttributeID>
+              <Name>Subscriber Band</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Permission</AttributeID>
+              <Name>Permission</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Preferred Channel1</AttributeID>
+              <Name>Preferred Channel1</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Preferred Channel2</AttributeID>
+              <Name>Preferred Channel2</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Interest1</AttributeID>
+              <Name>Interest1</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Interest2</AttributeID>
+              <Name>Interest2</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Interest3</AttributeID>
+              <Name>Interest3</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Effective Timestamp</AttributeID>
+              <Name>Effective Timestamp</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Expiry Timestamp</AttributeID>
+              <Name>Expiry Timestamp</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Is Current</AttributeID>
+              <Name>Is Current</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Source System Code</AttributeID>
+              <Name>Source System Code</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Create Timestamp</AttributeID>
+              <Name>Create Timestamp</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Update Timestamp</AttributeID>
+              <Name>Update Timestamp</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>MandatoryFilter</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Customer Id</ID>
+          <Name>Customer Id</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>10</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>customer_id</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>MandatoryFilter</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Account Number</ID>
+          <Name>Account Number</Name>
+          <EstimatedCount>1</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>account_number</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Customer Type</ID>
+          <Name>Customer Type</Name>
+          <EstimatedCount>3</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>3</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>customer_type</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Name</ID>
+          <Name>Name</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>100</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>name</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>MandatoryFilter</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Gender</ID>
+          <Name>Gender</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>gender</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Email Address</ID>
+          <Name>Email Address</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>200</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>email_address</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>MandatoryFilter</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Date Of Birth</ID>
+          <Name>Date Of Birth</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>date_of_birth</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>MandatoryFilter</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Address1</ID>
+          <Name>Address1</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>address1</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>MandatoryFilter</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Address2</ID>
+          <Name>Address2</Name>
+          <EstimatedCount>1001</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>address2</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>FilteredList</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Address3</ID>
+          <Name>Address3</Name>
+          <EstimatedCount>1</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>address3</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Address4</ID>
+          <Name>Address4</Name>
+          <EstimatedCount>1</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>address4</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>City</ID>
+          <Name>City</Name>
+          <EstimatedCount>264</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>city</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>List</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>State</ID>
+          <Name>State</Name>
+          <EstimatedCount>5</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>state</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Zipcode</ID>
+          <Name>Zipcode</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>10</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>zipcode</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>MandatoryFilter</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Country</ID>
+          <Name>Country</Name>
+          <EstimatedCount>178</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>country</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>List</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Phone Number</ID>
+          <Name>Phone Number</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>20</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>phone_number</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>MandatoryFilter</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Occupation</ID>
+          <Name>Occupation</Name>
+          <EstimatedCount>101</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>occupation</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>List</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Household Income</ID>
+          <Name>Household Income</Name>
+          <EstimatedCount>11</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>30</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>household_income</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Date Registered</ID>
+          <Name>Date Registered</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>date_registered</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>MandatoryFilter</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Status</ID>
+          <Name>Status</Name>
+          <EstimatedCount>4</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>10</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>status</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Subscriber Class</ID>
+          <Name>Subscriber Class</Name>
+          <EstimatedCount>1</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>30</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>subscriber_class</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Subscriber Band</ID>
+          <Name>Subscriber Band</Name>
+          <EstimatedCount>1</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>30</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>subscriber_band</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Permission</ID>
+          <Name>Permission</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>2</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>permission</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Preferred Channel1</ID>
+          <Name>Preferred Channel1</Name>
+          <EstimatedCount>3</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>20</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>preferred_channel1</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Preferred Channel2</ID>
+          <Name>Preferred Channel2</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>20</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>preferred_channel2</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Interest1</ID>
+          <Name>Interest1</Name>
+          <EstimatedCount>38</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>30</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>interest1</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Interest2</ID>
+          <Name>Interest2</Name>
+          <EstimatedCount>38</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>30</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>interest2</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Interest3</ID>
+          <Name>Interest3</Name>
+          <EstimatedCount>38</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>30</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>interest3</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Effective Timestamp</ID>
+          <Name>Effective Timestamp</Name>
+          <EstimatedCount>2</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>effective_timestamp</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Expiry Timestamp</ID>
+          <Name>Expiry Timestamp</Name>
+          <EstimatedCount>1</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>expiry_timestamp</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Is Current</ID>
+          <Name>Is Current</Name>
+          <EstimatedCount>1</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>UnsignedTinyInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>is_current</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Source System Code</ID>
+          <Name>Source System Code</Name>
+          <EstimatedCount>1</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>UnsignedTinyInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>source_system_code</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Create Timestamp</ID>
+          <Name>Create Timestamp</Name>
+          <EstimatedCount>35</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>create_timestamp</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+        <Attribute>
+          <ID>Update Timestamp</ID>
+          <Name>Update Timestamp</Name>
+          <EstimatedCount>47</EstimatedCount>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_customer</TableID>
+                <ColumnID>update_timestamp</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <InstanceSelection>DropDown</InstanceSelection>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Hierarchy</ID>
+          <Name>Hierarchy</Name>
+          <Levels>
+            <Level>
+              <ID>Country</ID>
+              <Name>Country</Name>
+              <SourceAttributeID>Country</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>City</ID>
+              <Name>City</Name>
+              <SourceAttributeID>City</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <Cubes>
+    <Cube>
+      <ID>DDS</ID>
+      <Name>Product Sales</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="20" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8551" scrolltop="-220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="17066" y="14314" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_store (dbo.dim_store)" left="20" top="1481" logicalid="10" controlid="1" masterid="0" hint1="0" hint2="0" width="3863" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="00080000170f000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_dim_store" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_product (dbo.dim_product)" left="20" top="13107" logicalid="11" controlid="2" masterid="0" hint1="0" hint2="0" width="3863" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="00080000170f000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_dim_product" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_date (dbo.dim_date)" left="6283" top="7400" logicalid="12" controlid="3" masterid="0" hint1="0" hint2="0" width="3863" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="00080000170f000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_dim_date" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_product_sales (dbo.fact_product_sales)" left="20" top="7400" logicalid="13" controlid="4" masterid="0" hint1="0" hint2="0" width="3863" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="00080000170f000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_fact_product_sales" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="1552" top="5982" logicalid="14" controlid="5" masterid="0" hint1="0" hint2="0" width="799" height="1718" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[fk_fact_product_sales_dim_store]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="1951" y="6481" />
+                  <point x="1951" y="7400" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="1552" top="12100" logicalid="15" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="1507" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[fk_fact_product_sales_dim_product]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="4" sourceattachpoint="6" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="1951" y="13107" />
+                  <point x="1951" y="12400" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="3583" top="9501" logicalid="16" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[fk_fact_product_sales_dim_date]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="22" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="6283" y="9900" />
+                  <point x="3883" y="9900" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_customer (dbo.dim_customer)" left="-6436" top="7407" logicalid="17" controlid="8" masterid="0" hint1="0" hint2="0" width="4268" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="00080000ac10000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_dim_customer" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="-2468" top="9508" logicalid="18" controlid="9" masterid="0" hint1="0" hint2="0" width="2788" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[fk_fact_product_sales_dim_customer]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="4" sourceattachpoint="23" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="-2168" y="9907" />
+                  <point x="-1074" y="9907" />
+                  <point x="-1074" y="9900" />
+                  <point x="20" y="9900" />
+                </connector>
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-8551</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-220</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>-6436</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>1481</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>75</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Dimensions>
+        <Dimension>
+          <ID>Dim Product</ID>
+          <Name>Dim Product</Name>
+          <DimensionID>Dim Product</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Dim Product</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Product Code</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Name</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Description</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Artist</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Product Type</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Product Category</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Format</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Media</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Unit Price</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Unit Cost</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Status</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Source System Code</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Create Timestamp</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Update Timestamp</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Product Category - Product Type</HierarchyID>
+            </Hierarchy>
+            <Hierarchy>
+              <HierarchyID>Media - Unit Cost</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Store</ID>
+          <Name>Dim Store</Name>
+          <DimensionID>Dim Store</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Dim Store</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Store Number</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Store Name</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Store Type</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Store Address1</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Store Address2</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Store Address3</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Store Address4</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>City</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>State</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Zipcode</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Country</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Phone Number</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Web Site</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Region</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Prior Region</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Prior Region Date</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Division</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Prior Division</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Prior Division Date</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Source System Code</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Create Timestamp</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Update Timestamp</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Division - Region</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Date</ID>
+          <Name>Dim Date</Name>
+          <DimensionID>Dim Date</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Year</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Quarter</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Week</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>date_key</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Month</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Year -  Quarter</HierarchyID>
+            </Hierarchy>
+            <Hierarchy>
+              <HierarchyID>Year -  week_number</HierarchyID>
+            </Hierarchy>
+            <Hierarchy>
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Customer</ID>
+          <Name>Dim Customer</Name>
+          <DimensionID>Dim Customer</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Dim Customer</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Customer Id</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Account Number</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Customer Type</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Name</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Gender</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Email Address</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Date Of Birth</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Address1</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Address2</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Address3</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Address4</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>City</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>State</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Zipcode</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Country</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Phone Number</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Occupation</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Household Income</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Date Registered</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Status</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Subscriber Class</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Subscriber Band</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Permission</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Preferred Channel1</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Preferred Channel2</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Interest1</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Interest2</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Interest3</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Effective Timestamp</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Expiry Timestamp</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Is Current</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Source System Code</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Create Timestamp</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Update Timestamp</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+      </Dimensions>
+      <MeasureGroups>
+        <MeasureGroup>
+          <ID>Fact Product Sales</ID>
+          <Name>Fact Product Sales</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>Quantity</ID>
+              <Name>Quantity</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_fact_product_sales</TableID>
+                  <ColumnID>quantity</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Sales Value</ID>
+              <Name>Sales Value</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_fact_product_sales</TableID>
+                  <ColumnID>sales_value</ColumnID>
+                </Source>
+              </Source>
+              <FormatString>Currency</FormatString>
+            </Measure>
+            <Measure>
+              <ID>Sales Cost</ID>
+              <Name>Sales Cost</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_fact_product_sales</TableID>
+                  <ColumnID>sales_cost</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>date_key</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <DataSize>-1</DataSize>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_fact_product_sales</TableID>
+                        <ColumnID>sales_date_key</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Product</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Product</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_fact_product_sales</TableID>
+                        <ColumnID>product_key</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Store</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Store</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_fact_product_sales</TableID>
+                        <ColumnID>store_key</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Customer</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Customer</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_fact_product_sales</TableID>
+                        <ColumnID>customer_key</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>Fact Product Sales</ID>
+              <Name>Fact Product Sales</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>DDS</DataSourceViewID>
+                <TableID>dbo_fact_product_sales</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+      </MeasureGroups>
+      <Source>
+        <DataSourceViewID>DDS</DataSourceViewID>
+      </Source>
+      <Kpis>
+        <Kpi>
+          <ID>KPI</ID>
+          <Name>Sales</Name>
+          <Value>[Measures].[Sales Value]
+</Value>
+          <Goal>[Measures].[Sales Cost]*1.4</Goal>
+          <Status>case when [Measures].[Sales Value] &gt; [Measures].[Sales Cost]*1.6 then 1
+     when [Measures].[Sales Value] &gt; [Measures].[Sales Cost]*1.3 then 0.5
+     when [Measures].[Sales Value] &gt; [Measures].[Sales Cost] then 0
+     when [Measures].[Sales Value] &gt; [Measures].[Sales Cost]*0.8 then -0.5
+     else -1
+end</Status>
+          <Trend>case when isempty([Dim Date].[week_number].PrevMember) then 0
+     when [Measures].[Sales Value] &gt; ([Dim Date].[week_number].PrevMember,
+          [Measures].[Sales Value] * 1.2) then 1
+     when [Measures].[Sales Value] &gt; ([Dim Date].[week_number].PrevMember,
+          [Measures].[Sales Value]) then 0
+     else -1
+end</Trend>
+          <TrendGraphic>Standard Arrow</TrendGraphic>
+          <StatusGraphic>Gauge - Ascending</StatusGraphic>
+        </Kpi>
+        <Kpi>
+          <ID>KPI 1</ID>
+          <Name>Profit</Name>
+          <Value>[Measures].[Sales Value]-[Measures].[Sales Cost]</Value>
+          <Goal>[Measures].[Sales Value]*0.5</Goal>
+          <Status>case when ([Measures].[Sales Value]-[Measures].[Sales Cost]) &gt; 
+     [Measures].[Sales Value]*0.5 then 1
+     when ([Measures].[Sales Value]-[Measures].[Sales Cost]) &gt; 0 then 0
+     else -1
+end</Status>
+          <Trend>case when isempty([Dim Date].[week_number].PrevMember) then 1
+when ([Measures].[Sales Value]-[Measures].[Sales Cost]) &gt; 
+  1.2 * ([Dim Date].[week_number].PrevMember, 
+  ([Measures].[Sales Value]-[Measures].[Sales Cost])) then 1
+when ([Measures].[Sales Value]-[Measures].[Sales Cost]) &gt; 
+  1.1 * ([Dim Date].[week_number].PrevMember, 
+  ([Measures].[Sales Value]-[Measures].[Sales Cost])) then 0.5
+when ([Measures].[Sales Value]-[Measures].[Sales Cost]) &gt; 
+  ([Dim Date].[week_number].PrevMember, 
+  ([Measures].[Sales Value]-[Measures].[Sales Cost])) then 0
+when ([Measures].[Sales Value]-[Measures].[Sales Cost]) &gt; 
+  ([Dim Date].[week_number].PrevMember, 
+  0.9 * ([Measures].[Sales Value]-[Measures].[Sales Cost])) then -0.5
+else -1
+end</Trend>
+          <TrendGraphic>Standard Arrow</TrendGraphic>
+          <StatusGraphic>Traffic Light</StatusGraphic>
+        </Kpi>
+      </Kpis>
+    </Cube>
+  </Cubes>
+  <MiningStructures>
+    <MiningStructure>
+      <ID>Purchase Pattern2</ID>
+      <Name>Purchase Pattern</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+          <Value>dbo_dm_purchase_pattern</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8640" scrolltop="-5147" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="16431" y="14208" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dm_purchase_pattern (dbo.dm_purchase_pattern)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="00080000b80b00009b0f0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_dm_purchase_pattern" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-8640</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-5147</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DDS</DataSourceViewID>
+      </Source>
+      <Columns>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Customer Key</ID>
+          <Name>Customer Key</Name>
+          <IsKey>true</IsKey>
+          <Type>Long</Type>
+          <Content>Key</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dm_purchase_pattern</TableID>
+                <ColumnID>customer_key</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Gender</ID>
+          <Name>Gender</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dm_purchase_pattern</TableID>
+                <ColumnID>gender</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Interest</ID>
+          <Name>Interest</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>30</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dm_purchase_pattern</TableID>
+                <ColumnID>interest</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Music</ID>
+          <Name>Music</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dm_purchase_pattern</TableID>
+                <ColumnID>music</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Occupation</ID>
+          <Name>Occupation</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dm_purchase_pattern</TableID>
+                <ColumnID>occupation</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+      </Columns>
+      <MiningModels>
+        <MiningModel>
+          <ID>Decision Trees</ID>
+          <Name>Decision Trees</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Decision_Trees</Algorithm>
+          <Columns>
+            <Column>
+              <ID>Customer Key</ID>
+              <Name>Customer Key</Name>
+              <SourceColumnID>Customer Key</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>Gender</ID>
+              <Name>Gender</Name>
+              <SourceColumnID>Gender</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Interest</ID>
+              <Name>Interest</Name>
+              <SourceColumnID>Interest</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Music</ID>
+              <Name>Music</Name>
+              <SourceColumnID>Music</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+            <Column>
+              <ID>Occupation</ID>
+              <Name>Occupation</Name>
+              <SourceColumnID>Occupation</SourceColumnID>
+            </Column>
+          </Columns>
+          <AllowDrillThrough>true</AllowDrillThrough>
+        </MiningModel>
+        <MiningModel>
+          <ID>Clustering</ID>
+          <Name>Clustering</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Clustering</Algorithm>
+          <Columns>
+            <Column>
+              <ID>Customer Key</ID>
+              <Name>Customer Key</Name>
+              <SourceColumnID>Customer Key</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>Gender</ID>
+              <Name>Gender</Name>
+              <SourceColumnID>Gender</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Interest</ID>
+              <Name>Interest</Name>
+              <SourceColumnID>Interest</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Music</ID>
+              <Name>Music</Name>
+              <SourceColumnID>Music</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+            <Column>
+              <ID>Occupation</ID>
+              <Name>Occupation</Name>
+              <SourceColumnID>Occupation</SourceColumnID>
+            </Column>
+          </Columns>
+        </MiningModel>
+      </MiningModels>
+    </MiningStructure>
+  </MiningStructures>
+  <DataSources>
+    <DataSource xsi:type="RelationalDataSource">
+      <ID>DDS</ID>
+      <Name>DDS</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <ConnectionString>Provider=SQLOLEDB.1;Data Source=VIVA2;Persist Security Info=True;Password=;User ID=;Initial Catalog=DDS</ConnectionString>
+      <ConnectionStringSecurity>PasswordRemoved</ConnectionStringSecurity>
+      <ImpersonationInfo>
+        <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>
+        <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+      </ImpersonationInfo>
+      <Timeout>PT0S</Timeout>
+    </DataSource>
+  </DataSources>
+  <DataSourceViews>
+    <DataSourceView>
+      <ID>DDS</ID>
+      <Name>DDS</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+          <Value>_ALL_TABLES_</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+          <Value>
+            <Layouts xmlns="">
+              <Diagram>
+                <Name>_ALL_TABLES_</Name>
+                <DiagramLayout>
+                  <dds>
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2360" scrolltop="-1128" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="77" x="21484" y="15716" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                      <font>
+                        <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                      </font>
+                      <mouseicon>
+                        <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                      </mouseicon>
+                    </diagram>
+                    <layoutmanager>
+                      <ddsxmlobj />
+                    </layoutmanager>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_date (dbo.dim_date)" left="7229" top="12428" logicalid="10" controlid="1" masterid="0" hint1="0" hint2="0" width="3863" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="00080000170f000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_dim_date" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_product (dbo.dim_product)" left="7228" top="653" logicalid="11" controlid="2" masterid="0" hint1="0" hint2="0" width="3863" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="00080000170f000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_dim_product" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_store (dbo.dim_store)" left="13491" top="6644" logicalid="12" controlid="3" masterid="0" hint1="0" hint2="0" width="3863" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="00080000170f000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_dim_store" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_product_sales (dbo.fact_product_sales)" left="7228" top="6644" logicalid="13" controlid="4" masterid="0" hint1="0" hint2="0" width="3863" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="00080000170f000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_fact_product_sales" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="10791" top="8745" logicalid="14" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[fk_fact_product_sales_dim_store]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="22" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="13491" y="9144" />
+                        <point x="11091" y="9144" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="8760" top="5154" logicalid="15" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="1790" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[fk_fact_product_sales_dim_product]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="4" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="9159" y="5653" />
+                        <point x="9159" y="6644" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="8761" top="11344" logicalid="16" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="1584" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[fk_fact_product_sales_dim_date]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="6" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="9160" y="12428" />
+                        <point x="9160" y="12028" />
+                        <point x="9159" y="12028" />
+                        <point x="9159" y="12131" />
+                        <point x="9159" y="12131" />
+                        <point x="9159" y="11644" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_customer (dbo.dim_customer)" left="0" top="6560" logicalid="17" controlid="8" masterid="0" hint1="0" hint2="0" width="4157" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000800003d10000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_dim_customer" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="3857" top="8111" logicalid="18" controlid="9" masterid="0" hint1="0" hint2="0" width="3671" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[fk_fact_product_sales_dim_customer]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="4" sourceattachpoint="21" destattachpoint="20" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="4157" y="8510" />
+                        <point x="5692" y="8510" />
+                        <point x="5692" y="8594" />
+                        <point x="7228" y="8594" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dm_purchase_pattern (dbo.dm_purchase_pattern)" left="12639" top="12632" logicalid="21" controlid="12" masterid="0" hint1="0" hint2="0" width="3230" height="3952" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000800009e0c0000700f0000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_dm_purchase_pattern" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                  </dds>
+                </DiagramLayout>
+                <ShowRelationshipNames>False</ShowRelationshipNames>
+                <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+                <DiagramViewPortLeft>-2360</DiagramViewPortLeft>
+                <DiagramViewPortTop>-1128</DiagramViewPortTop>
+                <DiagramBoundingLeft>0</DiagramBoundingLeft>
+                <DiagramBoundingTop>0</DiagramBoundingTop>
+                <DiagramZoom>77</DiagramZoom>
+              </Diagram>
+            </Layouts>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <DataSourceID>DDS</DataSourceID>
+      <Schema>
+        <xs:schema id="DDS" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+          <xs:element name="DDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="1e186c5e-8284-42bc-a93f-844849fb44e0">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="dbo_dim_date" msprop:FriendlyName="dim_date" msprop:DbSchemaName="dbo" msprop:DbTableName="dim_date" msprop:design-time-name="0ac7e47e-8ab0-44aa-80e3-f6246eb6a048" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="date_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="date_key" msprop:DbColumnName="date_key" msprop:design-time-name="ff0ef330-1614-4479-8396-291daeacc9df" type="xs:int" />
+                      <xs:element name="date" msprop:FriendlyName="date" msprop:DbColumnName="date" msprop:design-time-name="fcd03305-19ee-44d5-8660-eb41a59f87cc">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="system_date" msprop:FriendlyName="system_date" msprop:DbColumnName="system_date" msprop:design-time-name="10630329-5397-43d6-b6ab-5fbd46fad5a3">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="sql_date" msprop:FriendlyName="sql_date" msprop:DbColumnName="sql_date" msprop:design-time-name="133c02b7-da65-4f3a-a75f-35965fe44c61" type="xs:dateTime" />
+                      <xs:element name="julian_date" msprop:FriendlyName="julian_date" msprop:DbColumnName="julian_date" msprop:design-time-name="41bafe7c-1d2d-4b03-842c-912b57d28c4f" type="xs:int" />
+                      <xs:element name="day" msprop:FriendlyName="day" msprop:DbColumnName="day" msprop:design-time-name="6c06fe22-51da-429b-9adf-dff0681391b2" type="xs:unsignedByte" />
+                      <xs:element name="day_of_the_week" msprop:FriendlyName="day_of_the_week" msprop:DbColumnName="day_of_the_week" msprop:design-time-name="eefb389d-dfa0-4e75-b39e-c91ab6c62184" type="xs:unsignedByte" />
+                      <xs:element name="day_name" msprop:FriendlyName="day_name" msprop:DbColumnName="day_name" msprop:design-time-name="bb43be8d-e516-436f-bf8e-81d1184b2054">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="9" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="day_of_the_year" msprop:FriendlyName="day_of_the_year" msprop:DbColumnName="day_of_the_year" msprop:design-time-name="d3447946-1265-4782-ba7b-fb21258191cb" type="xs:short" />
+                      <xs:element name="week_number" msprop:FriendlyName="week_number" msprop:DbColumnName="week_number" msprop:design-time-name="c7097319-15f8-4f1b-b88e-e245a82bf747" type="xs:unsignedByte" />
+                      <xs:element name="month" msprop:FriendlyName="month" msprop:DbColumnName="month" msprop:design-time-name="29592bdd-dfb3-4106-9485-0cb519d56dc1" type="xs:unsignedByte" />
+                      <xs:element name="month_name" msprop:FriendlyName="month_name" msprop:DbColumnName="month_name" msprop:design-time-name="59a79b12-acd7-44e6-9249-1209256a7af4">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="9" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="short_month_name" msprop:FriendlyName="short_month_name" msprop:DbColumnName="short_month_name" msprop:design-time-name="0db58fcd-ae25-42cf-bd1f-869647fa2fd2">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="3" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="quarter" msprop:FriendlyName="quarter" msprop:DbColumnName="quarter" msprop:design-time-name="9cbe4527-3111-4570-9060-fa4b194e0d0e">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="2" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="year" msprop:FriendlyName="year" msprop:DbColumnName="year" msprop:design-time-name="9428625f-ec58-4048-883a-b9e1deb27a06" type="xs:short" />
+                      <xs:element name="fiscal_week" msprop:FriendlyName="fiscal_week" msprop:DbColumnName="fiscal_week" msprop:design-time-name="e73e1e0b-9328-43c6-a09b-9f9f7a140e45" type="xs:unsignedByte" minOccurs="0" />
+                      <xs:element name="fiscal_period" msprop:FriendlyName="fiscal_period" msprop:DbColumnName="fiscal_period" msprop:design-time-name="8502eb51-02d8-4e1d-9e3f-a3a7c7ab353c" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="4" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="fiscal_quarter" msprop:FriendlyName="fiscal_quarter" msprop:DbColumnName="fiscal_quarter" msprop:design-time-name="d81044f5-f82e-4cf5-938c-3e68d05e466b" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="3" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="fiscal_year" msprop:FriendlyName="fiscal_year" msprop:DbColumnName="fiscal_year" msprop:design-time-name="11a7f1c7-8b42-4a48-8ac4-f01674b0ff48" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="6" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="week_day" msprop:FriendlyName="week_day" msprop:DbColumnName="week_day" msprop:design-time-name="7c59532c-adca-4232-bffd-a8afccb0bba0" type="xs:unsignedByte" />
+                      <xs:element name="us_holiday" msprop:FriendlyName="us_holiday" msprop:DbColumnName="us_holiday" msprop:design-time-name="e5f2334b-74d8-4dc5-86ff-4c17a3f3464d" type="xs:unsignedByte" minOccurs="0" />
+                      <xs:element name="uk_holiday" msprop:FriendlyName="uk_holiday" msprop:DbColumnName="uk_holiday" msprop:design-time-name="81c7e6d3-3cf1-43d7-a15b-0d9714706479" type="xs:unsignedByte" minOccurs="0" />
+                      <xs:element name="month_end" msprop:FriendlyName="month_end" msprop:DbColumnName="month_end" msprop:design-time-name="f445b58a-302f-466c-8373-3b43856fe71c" type="xs:unsignedByte" />
+                      <xs:element name="period_end" msprop:FriendlyName="period_end" msprop:DbColumnName="period_end" msprop:design-time-name="fc4cfb71-06e0-4adb-b2a2-b2632b92b918" type="xs:unsignedByte" minOccurs="0" />
+                      <xs:element name="short_day" msprop:FriendlyName="short_day" msprop:DbColumnName="short_day" msprop:design-time-name="fd358ebd-232e-4a00-a728-bbc1863f9b71" type="xs:unsignedByte" minOccurs="0" />
+                      <xs:element name="source_system_code" msprop:FriendlyName="source_system_code" msprop:DbColumnName="source_system_code" msprop:design-time-name="5c2743d3-d1bd-4aac-a37a-bd1a2777303a" type="xs:unsignedByte" />
+                      <xs:element name="create_timestamp" msprop:FriendlyName="create_timestamp" msprop:DbColumnName="create_timestamp" msprop:design-time-name="80887010-cf6c-4df4-8da6-332da0715550" type="xs:dateTime" />
+                      <xs:element name="update_timestamp" msprop:FriendlyName="update_timestamp" msprop:DbColumnName="update_timestamp" msprop:design-time-name="052d6d13-1b62-418f-aee9-27bcfc5ddb71" type="xs:dateTime" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_dim_product" msprop:FriendlyName="dim_product" msprop:DbSchemaName="dbo" msprop:DbTableName="dim_product" msprop:design-time-name="b8ee8e13-b627-40d2-9dcb-ef4fe8fc2134" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="product_key" msprop:FriendlyName="product_key" msprop:DbColumnName="product_key" msprop:design-time-name="51879291-b7ff-44de-9a17-94ad7d7e5a99" type="xs:int" />
+                      <xs:element name="product_code" msprop:FriendlyName="product_code" msprop:DbColumnName="product_code" msprop:design-time-name="f2397b54-3aa1-4176-9b81-933441f48800" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="name" msprop:FriendlyName="name" msprop:DbColumnName="name" msprop:design-time-name="e92dc6df-870b-4003-bc1b-d2f6ecdb5604" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="description" msprop:FriendlyName="description" msprop:DbColumnName="description" msprop:design-time-name="5f208cbc-1c93-4fa9-a3c4-898427959ea7" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="100" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="title" msprop:FriendlyName="title" msprop:DbColumnName="title" msprop:design-time-name="3305d349-472a-4c35-ad08-1c89a7e5c069" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="100" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="artist" msprop:FriendlyName="artist" msprop:DbColumnName="artist" msprop:design-time-name="bf2c74a0-1d15-4f3c-9449-4093530ee788" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="100" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="product_type" msprop:FriendlyName="product_type" msprop:DbColumnName="product_type" msprop:design-time-name="88c3b419-1d8a-4055-8560-e8fdaef49ebe" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="20" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="product_category" msprop:FriendlyName="product_category" msprop:DbColumnName="product_category" msprop:design-time-name="414fe5de-5c86-4f0f-8862-b446d1b25904" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="30" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="format" msprop:FriendlyName="format" msprop:DbColumnName="format" msprop:design-time-name="b5007302-dc70-4c5e-bb5b-d7a9ee2f5931" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="30" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="media" msprop:FriendlyName="media" msprop:DbColumnName="media" msprop:design-time-name="d60ea367-d334-418a-bebb-ba8e79c31a68" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="15" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="unit_price" msprop:FriendlyName="unit_price" msprop:DbColumnName="unit_price" msprop:design-time-name="d224427f-2913-4357-9831-860bd7be5333" type="xs:decimal" minOccurs="0" />
+                      <xs:element name="unit_cost" msprop:FriendlyName="unit_cost" msprop:DbColumnName="unit_cost" msprop:design-time-name="89f5c3e6-91f3-49ba-af18-3d1973ecdf4c" type="xs:decimal" minOccurs="0" />
+                      <xs:element name="status" msprop:FriendlyName="status" msprop:DbColumnName="status" msprop:design-time-name="8b10a086-9521-4125-bc79-b43e601c72b0" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="15" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="source_system_code" msprop:FriendlyName="source_system_code" msprop:DbColumnName="source_system_code" msprop:design-time-name="50c408dc-3656-406f-bb66-a534227650c0" type="xs:unsignedByte" minOccurs="0" />
+                      <xs:element name="create_timestamp" msprop:FriendlyName="create_timestamp" msprop:DbColumnName="create_timestamp" msprop:design-time-name="d43b0d8a-deb8-431e-ba54-e5e73603e635" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="update_timestamp" msprop:FriendlyName="update_timestamp" msprop:DbColumnName="update_timestamp" msprop:design-time-name="c6dcec16-a6a3-4427-84e6-7eb2149007d8" type="xs:dateTime" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_dim_store" msprop:FriendlyName="dim_store" msprop:DbSchemaName="dbo" msprop:DbTableName="dim_store" msprop:design-time-name="981e4a59-99df-4212-a68b-0d8a4a7d3edf" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="store_key" msprop:FriendlyName="store_key" msprop:DbColumnName="store_key" msprop:design-time-name="2216f2a6-9264-4684-9567-87afaf6774ff" type="xs:int" />
+                      <xs:element name="store_number" msprop:FriendlyName="store_number" msprop:DbColumnName="store_number" msprop:design-time-name="c17c9da8-c829-40fe-a2d7-156e6e926f41" type="xs:short" minOccurs="0" />
+                      <xs:element name="store_name" msprop:FriendlyName="store_name" msprop:DbColumnName="store_name" msprop:design-time-name="6af6ead5-4562-4f47-9d5d-839e2614a1da" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="store_type" msprop:FriendlyName="store_type" msprop:DbColumnName="store_type" msprop:design-time-name="0d28908b-17a7-44ff-8d85-336144baab2f" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="30" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="store_address1" msprop:FriendlyName="store_address1" msprop:DbColumnName="store_address1" msprop:design-time-name="30715777-7f96-41a6-9ec2-22e4234ad056" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="store_address2" msprop:FriendlyName="store_address2" msprop:DbColumnName="store_address2" msprop:design-time-name="d945c288-0fec-41c3-8caf-fbd2f37b1d75" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="store_address3" msprop:FriendlyName="store_address3" msprop:DbColumnName="store_address3" msprop:design-time-name="d74619d8-4061-43c2-bbc1-4aa88eb27e0b" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="store_address4" msprop:FriendlyName="store_address4" msprop:DbColumnName="store_address4" msprop:design-time-name="55a7876b-9158-42a7-8b14-f1518992b512" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="city" msprop:FriendlyName="city" msprop:DbColumnName="city" msprop:design-time-name="e55a8f71-f80a-4a13-900c-e23b5c6a213f" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="state" msprop:FriendlyName="state" msprop:DbColumnName="state" msprop:design-time-name="a3514063-7900-4aad-b1d8-86879c2784d4" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="zipcode" msprop:FriendlyName="zipcode" msprop:DbColumnName="zipcode" msprop:design-time-name="c3c97037-8131-4ff5-8b63-108fac8005fd" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="country" msprop:FriendlyName="country" msprop:DbColumnName="country" msprop:design-time-name="e0cc7a12-dd32-49ca-9c38-c070fabdb1fd" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="phone_number" msprop:FriendlyName="phone_number" msprop:DbColumnName="phone_number" msprop:design-time-name="7d5d2026-81b5-40ea-ad97-cdb1c21858fc" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="20" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="web_site" msprop:FriendlyName="web_site" msprop:DbColumnName="web_site" msprop:design-time-name="c607bf09-69b2-4d9c-92f9-bf0ea8dbfbec" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="100" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="region" msprop:FriendlyName="region" msprop:DbColumnName="region" msprop:design-time-name="6f908076-844c-4c04-8570-5de8d93f1d29" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="prior_region" msprop:FriendlyName="prior_region" msprop:DbColumnName="prior_region" msprop:design-time-name="d54c4ed9-1d56-4f68-bab3-e2b06a8ac50a" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="prior_region_date" msprop:FriendlyName="prior_region_date" msprop:DbColumnName="prior_region_date" msprop:design-time-name="3444c296-bd88-4400-b2db-95c39104e22d" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="division" msprop:FriendlyName="division" msprop:DbColumnName="division" msprop:design-time-name="4cea4ff7-95bc-42cf-b165-cbc5d60abb3f" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="prior_division" msprop:FriendlyName="prior_division" msprop:DbColumnName="prior_division" msprop:design-time-name="c60f65d9-9a4b-4b8d-a53a-32ecbb806368" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="prior_division_date" msprop:FriendlyName="prior_division_date" msprop:DbColumnName="prior_division_date" msprop:design-time-name="83da7e26-4b29-4d6b-9837-971c48f97c4f" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="source_system_code" msprop:FriendlyName="source_system_code" msprop:DbColumnName="source_system_code" msprop:design-time-name="4f9a8f04-99aa-4fd4-af1f-bb1347c92b39" type="xs:unsignedByte" minOccurs="0" />
+                      <xs:element name="create_timestamp" msprop:FriendlyName="create_timestamp" msprop:DbColumnName="create_timestamp" msprop:design-time-name="4eb071a8-0612-4fba-9fec-6178782f74db" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="update_timestamp" msprop:FriendlyName="update_timestamp" msprop:DbColumnName="update_timestamp" msprop:design-time-name="22f1d47e-1368-4b94-a832-84e889ab333b" type="xs:dateTime" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_fact_product_sales" msprop:FriendlyName="fact_product_sales" msprop:DbSchemaName="dbo" msprop:DbTableName="fact_product_sales" msprop:design-time-name="329e2429-3967-40bf-bbdc-75bc563e24ad" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="sales_date_key" msprop:FriendlyName="sales_date_key" msprop:DbColumnName="sales_date_key" msprop:design-time-name="fb8e0c9f-4534-411f-91c5-1d6044a90334" type="xs:int" />
+                      <xs:element name="customer_key" msprop:FriendlyName="customer_key" msprop:DbColumnName="customer_key" msprop:design-time-name="e11423c9-8a3e-4b70-9ca2-601ac49285da" type="xs:int" />
+                      <xs:element name="product_key" msprop:FriendlyName="product_key" msprop:DbColumnName="product_key" msprop:design-time-name="019210e5-0180-4a14-b452-4b86b6cce19c" type="xs:int" />
+                      <xs:element name="store_key" msprop:FriendlyName="store_key" msprop:DbColumnName="store_key" msprop:design-time-name="c84311c1-f303-452a-a8fa-f80673216c7b" type="xs:int" />
+                      <xs:element name="order_id" msprop:FriendlyName="order_id" msprop:DbColumnName="order_id" msprop:design-time-name="4bb81322-1be6-4db3-8c6b-ee54d670d164" type="xs:int" />
+                      <xs:element name="line_number" msprop:FriendlyName="line_number" msprop:DbColumnName="line_number" msprop:design-time-name="a8cc45c2-c94c-461c-ba3d-f23b47aecea4" type="xs:int" />
+                      <xs:element name="quantity" msprop:FriendlyName="quantity" msprop:DbColumnName="quantity" msprop:design-time-name="e309908a-f835-43a9-9c07-129249af209c" type="xs:int" minOccurs="0" />
+                      <xs:element name="unit_price" msprop:FriendlyName="unit_price" msprop:DbColumnName="unit_price" msprop:design-time-name="9bf84d09-4864-4f0a-9b43-c6511d8f1e77" type="xs:decimal" minOccurs="0" />
+                      <xs:element name="unit_cost" msprop:FriendlyName="unit_cost" msprop:DbColumnName="unit_cost" msprop:design-time-name="e0a070a6-bd64-4634-aed1-b56a2f3dabe6" type="xs:decimal" minOccurs="0" />
+                      <xs:element name="sales_value" msprop:FriendlyName="sales_value" msprop:DbColumnName="sales_value" msprop:design-time-name="741dade2-2d51-43f3-92f3-60cc5d01dab8" type="xs:decimal" minOccurs="0" />
+                      <xs:element name="sales_cost" msprop:FriendlyName="sales_cost" msprop:DbColumnName="sales_cost" msprop:design-time-name="1a5ef2b5-e738-4b0b-af48-672aa6df7a34" type="xs:decimal" minOccurs="0" />
+                      <xs:element name="margin" msprop:FriendlyName="margin" msprop:DbColumnName="margin" msprop:design-time-name="b9e75573-8c5f-4e37-a975-7b5ecf602cb8" type="xs:decimal" minOccurs="0" />
+                      <xs:element name="sales_timestamp" msprop:FriendlyName="sales_timestamp" msprop:DbColumnName="sales_timestamp" msprop:design-time-name="0dc7b024-8225-4fe7-84fe-2d6c96042ab5" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="source_system_code" msprop:FriendlyName="source_system_code" msprop:DbColumnName="source_system_code" msprop:design-time-name="0df5d077-c2f1-4b6b-9a64-c21965c8213c" type="xs:unsignedByte" />
+                      <xs:element name="create_timestamp" msprop:FriendlyName="create_timestamp" msprop:DbColumnName="create_timestamp" msprop:design-time-name="e52010de-391e-4fce-81d8-e93fae98642d" type="xs:dateTime" />
+                      <xs:element name="update_timestamp" msprop:FriendlyName="update_timestamp" msprop:DbColumnName="update_timestamp" msprop:design-time-name="71f9fd55-4041-4b5b-9c92-e5d4e8bb86c2" type="xs:dateTime" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_dim_customer" msprop:FriendlyName="dim_customer" msprop:DbSchemaName="dbo" msprop:DbTableName="dim_customer" msprop:design-time-name="5d3a0d88-0e1e-44ef-8bd9-f0b17de772b6" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="customer_key" msprop:FriendlyName="customer_key" msprop:DbColumnName="customer_key" msprop:design-time-name="2cc36bad-2bbb-4a06-b97e-af9bde98681c" type="xs:int" />
+                      <xs:element name="customer_id" msprop:FriendlyName="customer_id" msprop:DbColumnName="customer_id" msprop:design-time-name="cb9baafb-fa0e-4eb8-b40c-6a478ce537ef">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="account_number" msprop:FriendlyName="account_number" msprop:DbColumnName="account_number" msprop:design-time-name="68ae2896-0b0d-464c-9e87-81ac5b538de5" type="xs:int" minOccurs="0" />
+                      <xs:element name="customer_type" msprop:FriendlyName="customer_type" msprop:DbColumnName="customer_type" msprop:design-time-name="42bfe8e8-ab19-48ad-b6fc-3205b39b870c" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="3" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="name" msprop:FriendlyName="name" msprop:DbColumnName="name" msprop:design-time-name="ab0e1acb-ddeb-435e-a033-a2d970bfb175" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="100" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="gender" msprop:FriendlyName="gender" msprop:DbColumnName="gender" msprop:design-time-name="092038ec-29f2-4c17-b744-efdd26e82dc9" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="1" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="email_address" msprop:FriendlyName="email_address" msprop:DbColumnName="email_address" msprop:design-time-name="a3c89fed-f14f-47b6-b5bd-88641c0d6566" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="200" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="date_of_birth" msprop:FriendlyName="date_of_birth" msprop:DbColumnName="date_of_birth" msprop:design-time-name="506c1432-4e50-4342-a485-9d1b8e5980b2" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="address1" msprop:FriendlyName="address1" msprop:DbColumnName="address1" msprop:design-time-name="b689d3ef-1088-451f-9627-479ac4ab4151" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="address2" msprop:FriendlyName="address2" msprop:DbColumnName="address2" msprop:design-time-name="0490a63b-eec0-4f61-befe-7d60e19b5fc0" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="address3" msprop:FriendlyName="address3" msprop:DbColumnName="address3" msprop:design-time-name="2d04ef02-4b9e-426c-9281-aa3ea297d8e4" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="address4" msprop:FriendlyName="address4" msprop:DbColumnName="address4" msprop:design-time-name="270a3016-a691-439a-89c4-2be410f0566a" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="city" msprop:FriendlyName="city" msprop:DbColumnName="city" msprop:design-time-name="3b7894ef-eca4-48b1-8bc6-53e4280f5324" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="state" msprop:FriendlyName="state" msprop:DbColumnName="state" msprop:design-time-name="bfd688c3-4ce3-496f-bf46-ae00872f7928" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="zipcode" msprop:FriendlyName="zipcode" msprop:DbColumnName="zipcode" msprop:design-time-name="94c40e32-d35f-4ae9-a318-90a58b028d1e" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="country" msprop:FriendlyName="country" msprop:DbColumnName="country" msprop:design-time-name="9f12185b-62e4-48f4-8d24-90573313f33d" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="phone_number" msprop:FriendlyName="phone_number" msprop:DbColumnName="phone_number" msprop:design-time-name="47e6a302-0f93-4f3a-a37e-3c7b855afa41" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="20" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="occupation" msprop:FriendlyName="occupation" msprop:DbColumnName="occupation" msprop:design-time-name="33512aae-95d6-42cc-977e-9d4e1533d45d" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="household_income" msprop:FriendlyName="household_income" msprop:DbColumnName="household_income" msprop:design-time-name="c826505c-edcc-49ff-a324-fa184e49d8e4" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="30" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="date_registered" msprop:FriendlyName="date_registered" msprop:DbColumnName="date_registered" msprop:design-time-name="833d5247-5eb7-4374-885c-e44a9e2e3b52" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="status" msprop:FriendlyName="status" msprop:DbColumnName="status" msprop:design-time-name="7eebafe8-7ef4-4843-a8ff-2738bb44a5b5" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="subscriber_class" msprop:FriendlyName="subscriber_class" msprop:DbColumnName="subscriber_class" msprop:design-time-name="a4c75671-70f1-4c13-a0b2-624e8aed2602" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="30" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="subscriber_band" msprop:FriendlyName="subscriber_band" msprop:DbColumnName="subscriber_band" msprop:design-time-name="38848b6e-794c-4ca4-9c7c-9479c71d4043" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="30" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="permission" msprop:FriendlyName="permission" msprop:DbColumnName="permission" msprop:design-time-name="7885f0bc-8e49-4856-bf66-14a7b67ea572" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="2" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="preferred_channel1" msprop:FriendlyName="preferred_channel1" msprop:DbColumnName="preferred_channel1" msprop:design-time-name="5791fcb4-f671-4932-822f-008630f3f59e" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="20" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="preferred_channel2" msprop:FriendlyName="preferred_channel2" msprop:DbColumnName="preferred_channel2" msprop:design-time-name="665dfa98-f22d-4c2b-ac9c-e78322e2aa01" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="20" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="interest1" msprop:FriendlyName="interest1" msprop:DbColumnName="interest1" msprop:design-time-name="311a2e8c-1a95-44b1-9c43-ed712be05f76" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="30" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="interest2" msprop:FriendlyName="interest2" msprop:DbColumnName="interest2" msprop:design-time-name="3c0400a7-b413-4acc-83e0-2e51ec5d55bf" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="30" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="interest3" msprop:FriendlyName="interest3" msprop:DbColumnName="interest3" msprop:design-time-name="896e9b89-e21d-4b87-a30a-da7a0edead21" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="30" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="effective_timestamp" msprop:FriendlyName="effective_timestamp" msprop:DbColumnName="effective_timestamp" msprop:design-time-name="5edc062d-92bf-4bb4-9917-a7b6f9fcdf58" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="expiry_timestamp" msprop:FriendlyName="expiry_timestamp" msprop:DbColumnName="expiry_timestamp" msprop:design-time-name="bcb0d3d3-4734-4a07-881a-087abe5db03c" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="is_current" msprop:FriendlyName="is_current" msprop:DbColumnName="is_current" msprop:design-time-name="4ba10ec9-f157-4d5b-bbde-0273be889737" type="xs:unsignedByte" minOccurs="0" />
+                      <xs:element name="source_system_code" msprop:FriendlyName="source_system_code" msprop:DbColumnName="source_system_code" msprop:design-time-name="2d5334f1-7f5f-4b06-9406-85babbe8b5b1" type="xs:unsignedByte" />
+                      <xs:element name="create_timestamp" msprop:FriendlyName="create_timestamp" msprop:DbColumnName="create_timestamp" msprop:design-time-name="26b869eb-aed0-444b-a190-9b599804110b" type="xs:dateTime" />
+                      <xs:element name="update_timestamp" msprop:FriendlyName="update_timestamp" msprop:DbColumnName="update_timestamp" msprop:design-time-name="b43eab5e-a937-4d15-b5d6-be4f944884dd" type="xs:dateTime" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_dm_purchase_pattern" msprop:FriendlyName="dm_purchase_pattern" msprop:DbSchemaName="dbo" msprop:DbTableName="dm_purchase_pattern" msprop:design-time-name="ad586220-5b90-4c38-babb-c6901c699046" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="customer_key" msprop:FriendlyName="customer_key" msprop:DbColumnName="customer_key" msprop:design-time-name="ed416836-4c10-446f-ab10-15ddc7f73f83" type="xs:int" />
+                      <xs:element name="gender" msprop:FriendlyName="gender" msprop:DbColumnName="gender" msprop:design-time-name="1425432d-0c2f-4abc-8d05-fb5bf80ac2db" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="1" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="interest" msprop:FriendlyName="interest" msprop:DbColumnName="interest" msprop:design-time-name="df7cb8c8-eff4-496f-913d-24fe92646763" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="30" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="occupation" msprop:FriendlyName="occupation" msprop:DbColumnName="occupation" msprop:design-time-name="9a9a75b6-40f0-4a63-bc6a-c1afc9732aef" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="music" msprop:FriendlyName="music" msprop:DbColumnName="music" msprop:design-time-name="aeb55c30-2435-4812-b51f-df6865c08158" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="1" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="film" msprop:FriendlyName="film" msprop:DbColumnName="film" msprop:design-time-name="36fdff78-68d3-4583-a441-bbd5300ac9d8" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="1" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="audio_books" msprop:FriendlyName="audio_books" msprop:DbColumnName="audio_books" msprop:design-time-name="cfa3cc1e-00d7-49d7-93f8-a4fff723815c" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="1" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+            <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_dim_date" />
+              <xs:field xpath="date_key" />
+            </xs:unique>
+            <xs:unique name="dbo_dim_product_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_dim_product" />
+              <xs:field xpath="product_key" />
+            </xs:unique>
+            <xs:unique name="dbo_dim_store_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_dim_store" />
+              <xs:field xpath="store_key" />
+            </xs:unique>
+            <xs:unique name="dbo_fact_product_sales_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_fact_product_sales" />
+              <xs:field xpath="order_id" />
+              <xs:field xpath="line_number" />
+            </xs:unique>
+            <xs:unique name="dbo_dim_customer_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_dim_customer" />
+              <xs:field xpath="customer_key" />
+            </xs:unique>
+            <xs:unique name="dbo_dm_purchase_pattern_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_dm_purchase_pattern" />
+              <xs:field xpath="customer_key" />
+            </xs:unique>
+            <xs:keyref name="fk_fact_product_sales_dim_customer" refer="dbo_dim_customer_Constraint1">
+              <xs:selector xpath=".//dbo_fact_product_sales" />
+              <xs:field xpath="customer_key" />
+            </xs:keyref>
+            <xs:keyref name="fk_fact_product_sales_dim_date" refer="Constraint1">
+              <xs:selector xpath=".//dbo_fact_product_sales" />
+              <xs:field xpath="sales_date_key" />
+            </xs:keyref>
+            <xs:keyref name="fk_fact_product_sales_dim_product" refer="dbo_dim_product_Constraint1">
+              <xs:selector xpath=".//dbo_fact_product_sales" />
+              <xs:field xpath="product_key" />
+            </xs:keyref>
+            <xs:keyref name="fk_fact_product_sales_dim_store" refer="dbo_dim_store_Constraint1">
+              <xs:selector xpath=".//dbo_fact_product_sales" />
+              <xs:field xpath="store_key" />
+            </xs:keyref>
+          </xs:element>
+        </xs:schema>
+        <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+      </Schema>
+    </DataSourceView>
+  </DataSourceViews>
+</Database>

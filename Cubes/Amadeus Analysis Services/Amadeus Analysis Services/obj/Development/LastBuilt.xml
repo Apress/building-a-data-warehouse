@@ -1,0 +1,212 @@
+﻿<Infos>
+  <Item name="Product Sales.cube">
+    <Time>633218426620000000</Time>
+    <Hash length="16">
+      <b>83</b>
+      <b>186</b>
+      <b>120</b>
+      <b>173</b>
+      <b>99</b>
+      <b>52</b>
+      <b>26</b>
+      <b>83</b>
+      <b>141</b>
+      <b>174</b>
+      <b>123</b>
+      <b>236</b>
+      <b>85</b>
+      <b>61</b>
+      <b>40</b>
+      <b>136</b>
+    </Hash>
+  </Item>
+  <Item name="Dim Date.dim">
+    <Time>633218426620000000</Time>
+    <Hash length="16">
+      <b>190</b>
+      <b>193</b>
+      <b>84</b>
+      <b>197</b>
+      <b>166</b>
+      <b>140</b>
+      <b>41</b>
+      <b>108</b>
+      <b>21</b>
+      <b>174</b>
+      <b>14</b>
+      <b>246</b>
+      <b>39</b>
+      <b>76</b>
+      <b>37</b>
+      <b>189</b>
+    </Hash>
+  </Item>
+  <Item name="Dim Store.dim">
+    <Time>633152753240000000</Time>
+    <Hash length="16">
+      <b>22</b>
+      <b>9</b>
+      <b>118</b>
+      <b>61</b>
+      <b>71</b>
+      <b>141</b>
+      <b>154</b>
+      <b>99</b>
+      <b>229</b>
+      <b>227</b>
+      <b>95</b>
+      <b>133</b>
+      <b>1</b>
+      <b>59</b>
+      <b>30</b>
+      <b>98</b>
+    </Hash>
+  </Item>
+  <Item name="Dim Customer.dim">
+    <Time>633163765500000000</Time>
+    <Hash length="16">
+      <b>1</b>
+      <b>120</b>
+      <b>142</b>
+      <b>237</b>
+      <b>34</b>
+      <b>64</b>
+      <b>0</b>
+      <b>185</b>
+      <b>56</b>
+      <b>71</b>
+      <b>226</b>
+      <b>221</b>
+      <b>90</b>
+      <b>54</b>
+      <b>173</b>
+      <b>132</b>
+    </Hash>
+  </Item>
+  <Item name="Product Sales.partitions">
+    <Time>633152753240000000</Time>
+    <Hash length="16">
+      <b>195</b>
+      <b>86</b>
+      <b>42</b>
+      <b>194</b>
+      <b>236</b>
+      <b>45</b>
+      <b>57</b>
+      <b>122</b>
+      <b>39</b>
+      <b>117</b>
+      <b>221</b>
+      <b>91</b>
+      <b>30</b>
+      <b>99</b>
+      <b>76</b>
+      <b>189</b>
+    </Hash>
+  </Item>
+  <Item name="Dim Product.dim">
+    <Time>633152753240000000</Time>
+    <Hash length="16">
+      <b>67</b>
+      <b>132</b>
+      <b>237</b>
+      <b>124</b>
+      <b>151</b>
+      <b>224</b>
+      <b>245</b>
+      <b>173</b>
+      <b>1</b>
+      <b>162</b>
+      <b>139</b>
+      <b>100</b>
+      <b>85</b>
+      <b>16</b>
+      <b>110</b>
+      <b>187</b>
+    </Hash>
+  </Item>
+  <Item name="DDS.dsv">
+    <Time>633163949060000000</Time>
+    <Hash length="16">
+      <b>134</b>
+      <b>120</b>
+      <b>201</b>
+      <b>119</b>
+      <b>97</b>
+      <b>235</b>
+      <b>101</b>
+      <b>178</b>
+      <b>191</b>
+      <b>150</b>
+      <b>87</b>
+      <b>79</b>
+      <b>155</b>
+      <b>86</b>
+      <b>59</b>
+      <b>190</b>
+    </Hash>
+  </Item>
+  <Item name="Purchase Pattern.dmm">
+    <Time>633164317200000000</Time>
+    <Hash length="16">
+      <b>25</b>
+      <b>92</b>
+      <b>41</b>
+      <b>232</b>
+      <b>239</b>
+      <b>135</b>
+      <b>16</b>
+      <b>110</b>
+      <b>154</b>
+      <b>34</b>
+      <b>230</b>
+      <b>19</b>
+      <b>55</b>
+      <b>140</b>
+      <b>244</b>
+      <b>105</b>
+    </Hash>
+  </Item>
+  <Item name="DDS.ds">
+    <Time>633152861600000000</Time>
+    <Hash length="16">
+      <b>35</b>
+      <b>228</b>
+      <b>38</b>
+      <b>28</b>
+      <b>117</b>
+      <b>20</b>
+      <b>195</b>
+      <b>33</b>
+      <b>186</b>
+      <b>58</b>
+      <b>236</b>
+      <b>218</b>
+      <b>225</b>
+      <b>121</b>
+      <b>218</b>
+      <b>185</b>
+    </Hash>
+  </Item>
+  <Item name="Amadeus Analysis Services.database">
+    <Time>633152859140000000</Time>
+    <Hash length="16">
+      <b>7</b>
+      <b>210</b>
+      <b>177</b>
+      <b>54</b>
+      <b>155</b>
+      <b>144</b>
+      <b>49</b>
+      <b>92</b>
+      <b>224</b>
+      <b>193</b>
+      <b>94</b>
+      <b>127</b>
+      <b>66</b>
+      <b>39</b>
+      <b>124</b>
+      <b>64</b>
+    </Hash>
+  </Item>
+</Infos>

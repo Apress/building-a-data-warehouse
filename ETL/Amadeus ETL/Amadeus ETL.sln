@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{D183A3D8-5FD8-494B-B014-37F57B35E655}") = "Amadeus ETL", "Amadeus ETL\Amadeus ETL.dtproj", "{C591A66B-5F43-434A-BD44-0C235967A547}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C591A66B-5F43-434A-BD44-0C235967A547}.Development|Default.ActiveCfg = Development
+		{C591A66B-5F43-434A-BD44-0C235967A547}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

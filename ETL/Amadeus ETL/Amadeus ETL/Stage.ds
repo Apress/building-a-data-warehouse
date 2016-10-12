@@ -1,0 +1,9 @@
+﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="e5c05d68-a2bd-48b6-88fd-9ee686809d6a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Stage</ID>
+  <Name>Stage</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <ConnectionString>Provider=SQLNCLI.1;Data Source=viva2;Persist Security Info=True;Password=;User ID=;Initial Catalog=Stage</ConnectionString>
+  <ConnectionStringSecurity>PasswordRemoved</ConnectionStringSecurity>
+  <Timeout>PT0S</Timeout>
+</DataSource>

@@ -1,0 +1,64 @@
+﻿<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <ProductVersion>9.0.1399.0</ProductVersion>
+  <SchemaVersion>9.0.2.10</SchemaVersion>
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmR3ZD0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9EYXRhV2FyZWhvdXNlL0Rlc2lnbmVyLzEuMCI+DQogIDxFbmFibGVkPmZhbHNlPC9FbmFibGVkPg0KICA8UHJvamVjdE5hbWU+PC9Qcm9qZWN0TmFtZT4NCiAgPEF1eFBhdGg+PC9BdXhQYXRoPg0KICA8TG9jYWxQYXRoPjwvTG9jYWxQYXRoPg0KICA8UHJvdmlkZXI+PC9Qcm92aWRlcj4NCjwvU291cmNlQ29udHJvbEluZm8+</State>
+  <Database>
+    <Name>Amadeus Entertainment.database</Name>
+    <FullPath>Amadeus Entertainment.database</FullPath>
+  </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>DDS.cube</Name>
+      <FullPath>DDS.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>DDS.partitions</Name>
+          <FullPath>DDS.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Dim Date.dim</Name>
+      <FullPath>Dim Date.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Product.dim</Name>
+      <FullPath>Dim Product.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>DDS.ds</Name>
+      <FullPath>DDS.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>DDS.dsv</Name>
+      <FullPath>DDS.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>DDS</Id>
+            <Name>DDS</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI.1;Data Source=viva2;Persist Security Info=True;Password=;User ID=;Initial Catalog=DDS</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>DDS</Id>
+            <Name>DDS</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

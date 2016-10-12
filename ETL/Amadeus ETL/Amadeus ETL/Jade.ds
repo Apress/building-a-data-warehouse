@@ -1,0 +1,9 @@
+﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="2c63e1ba-2d4b-42ee-8d59-cfb16975b6db" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Jade</ID>
+  <Name>Jade</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <ConnectionString>Provider=SQLOLEDB.1;Data Source=viva2;Persist Security Info=True;Password=;User ID=;Initial Catalog=Jade</ConnectionString>
+  <ConnectionStringSecurity>PasswordRemoved</ConnectionStringSecurity>
+  <Timeout>PT0S</Timeout>
+</DataSource>

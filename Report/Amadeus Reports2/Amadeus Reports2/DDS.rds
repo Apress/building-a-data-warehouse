@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>DDS</Name>
+  <DataSourceID>0b27279e-c4ce-48cf-a2af-3a9c87134b0d</DataSourceID>
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=viva2;Initial Catalog=DDS</ConnectString>
+  </ConnectionProperties>
+</RptDataSource>

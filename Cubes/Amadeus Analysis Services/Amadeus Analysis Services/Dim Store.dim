@@ -1,0 +1,549 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2e2cbf9f-3e80-4a67-ba0f-ffbf95c27c1c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Store</ID>
+  <Name>Dim Store</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8bb16bd5-a7da-4e63-bfe4-5598b9c44233">
+    <DataSourceViewID>DDS</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="30d717db-7e7d-4842-9447-cbd02549d3b1">
+      <ID>Dim Store</ID>
+      <Name>Dim Store</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>103</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9752749d-2665-4d1b-a32d-a5adb5ff8ff9">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1163009c-197e-4c68-ac18-a9fe5ba6af07">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>store_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d7048094-4c26-4078-a66e-e95301ca40a6">
+          <AttributeID>Store Number</AttributeID>
+          <Name>Store Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4040b76d-aaed-44fd-a801-f605b8904ca2">
+          <AttributeID>Store Name</AttributeID>
+          <Name>Store Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c1123ffc-5ae0-4a53-a52f-f7804d6a94f2">
+          <AttributeID>Store Type</AttributeID>
+          <Name>Store Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="50dfff1d-0df0-42cd-9b34-d2a436de9b9c">
+          <AttributeID>Store Address1</AttributeID>
+          <Name>Store Address1</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1dd7e305-429e-456e-b03e-ba0b51314b04">
+          <AttributeID>Store Address2</AttributeID>
+          <Name>Store Address2</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0ca9d010-b056-468d-9a8e-0d0e3143b64a">
+          <AttributeID>Store Address3</AttributeID>
+          <Name>Store Address3</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f733ff4e-2a51-4156-bdec-d641d495d961">
+          <AttributeID>Store Address4</AttributeID>
+          <Name>Store Address4</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3c77f475-b917-4da9-8957-ab010817df56">
+          <AttributeID>City</AttributeID>
+          <Name>City</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="79329591-65f6-4333-9b74-27bce8dff700">
+          <AttributeID>State</AttributeID>
+          <Name>State</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f105fccd-13ae-462a-b0e2-d7a07acee2e2">
+          <AttributeID>Zipcode</AttributeID>
+          <Name>Zipcode</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="73fe764c-4478-4729-9f47-60c7c4b962a9">
+          <AttributeID>Country</AttributeID>
+          <Name>Country</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6ba556dc-8832-42a4-b223-f1cd061ef6b1">
+          <AttributeID>Phone Number</AttributeID>
+          <Name>Phone Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a762add0-5b4d-4599-8044-fca6476c74dd">
+          <AttributeID>Web Site</AttributeID>
+          <Name>Web Site</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7943e2f6-742e-49c1-b6e3-75479d528b8f">
+          <AttributeID>Region</AttributeID>
+          <Name>Region</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d301f272-7b13-45d2-90a4-2df37bedfa52">
+          <AttributeID>Prior Region</AttributeID>
+          <Name>Prior Region</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7d3b43d1-4e1c-4d37-8b64-0b98f474266a">
+          <AttributeID>Prior Region Date</AttributeID>
+          <Name>Prior Region Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="16161cdb-a980-4e88-bacd-351d7aa26bfe">
+          <AttributeID>Division</AttributeID>
+          <Name>Division</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="205020ac-fd58-4fb4-af25-caec7ec900e1">
+          <AttributeID>Prior Division</AttributeID>
+          <Name>Prior Division</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="87bb6213-3528-4444-92ec-74a8262cb40d">
+          <AttributeID>Prior Division Date</AttributeID>
+          <Name>Prior Division Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f33978d7-fe84-44e6-b9d4-512ca0b77d85">
+          <AttributeID>Source System Code</AttributeID>
+          <Name>Source System Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="00f43e30-dfb8-4edc-834a-b5a6c3e93600">
+          <AttributeID>Create Timestamp</AttributeID>
+          <Name>Create Timestamp</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b359457d-29a5-4fc2-b191-ea061b98fce9">
+          <AttributeID>Update Timestamp</AttributeID>
+          <Name>Update Timestamp</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>List</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="b27ef354-e07c-4552-9a13-44a584f15aaf">
+      <ID>Store Number</ID>
+      <Name>Store Number</Name>
+      <EstimatedCount>103</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1f472db7-22cc-48c9-a69a-e7588f1f7e41">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2eea8092-3e9c-47d3-8b82-1c084466fa11">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>store_number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>List</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="2633b01e-81e8-42ef-96a2-3761451e4033">
+      <ID>Store Name</ID>
+      <Name>Store Name</Name>
+      <EstimatedCount>96</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5f5401d5-d6b5-44ce-97b9-388b0497c4f6">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5f9a2f40-7054-4ef9-84f7-dda8b5ea9102">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>store_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="515e677c-3bef-4af4-8605-c43f00448c2a">
+      <ID>Store Type</ID>
+      <Name>Store Type</Name>
+      <EstimatedCount>5</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6100c285-705b-4b4c-9b13-481ab489fc58">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="eb5b0b54-126a-472f-84e4-44a20f7b0ef4">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>store_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="444b0389-c8ca-4b98-95a0-5d6bd60b67f5">
+      <ID>Store Address1</ID>
+      <Name>Store Address1</Name>
+      <EstimatedCount>90</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5f1cfbd8-2b90-44a9-9d9f-e1ed1af4f5a7">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c215c3aa-4574-440c-aaa7-797770fbcc60">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>store_address1</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="66fc3ef1-a5cd-495b-9843-da53fc3c2dc9">
+      <ID>Store Address2</ID>
+      <Name>Store Address2</Name>
+      <EstimatedCount>92</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="77b06041-8fdb-4aae-a0cb-e653e9d85471">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="50b74ad6-b80a-454f-819a-ca01c71187f8">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>store_address2</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="8702942f-ac42-4381-8f69-1adfefdf5137">
+      <ID>Store Address3</ID>
+      <Name>Store Address3</Name>
+      <EstimatedCount>93</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ba57fd80-7617-4851-bf7b-102e610e97a3">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="62477d16-ff5c-49b7-b75a-12bb3f40c6a8">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>store_address3</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="7ac741e1-334b-4fd0-9aac-a95614de6a53">
+      <ID>Store Address4</ID>
+      <Name>Store Address4</Name>
+      <EstimatedCount>3</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="221ff317-61d0-4843-babd-619a07a5744b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fd77eaa5-431b-4cdf-8891-c44be8f8ad85">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>store_address4</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="52c713e0-bf53-473e-9e2e-ef2e5c6880d1">
+      <ID>City</ID>
+      <Name>City</Name>
+      <EstimatedCount>96</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0a7f0b5d-a20c-4395-ab9f-15409a7b450b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="375dd52f-77a2-47aa-9fca-0ea7e81c8cf4">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>city</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="39c2fde9-7fc2-461b-bc16-df41ad9ffe3f">
+      <ID>State</ID>
+      <Name>State</Name>
+      <EstimatedCount>19</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="895c8718-b054-4bbd-b77a-ae1a7dd437ea">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="78c38cda-7843-498a-8e70-e0505d2f6828">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>state</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="3f6f5b7a-be38-4aae-abe0-2014b68d0914">
+      <ID>Zipcode</ID>
+      <Name>Zipcode</Name>
+      <EstimatedCount>60</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a1657e11-3427-4daf-ba69-9571c821d0c0">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4aa9a218-1e89-435c-a61f-f3d61d1f512f">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>zipcode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="21de7070-14bc-4738-a5a3-43ddf2b5d90f">
+      <ID>Country</ID>
+      <Name>Country</Name>
+      <EstimatedCount>9</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="97e7a23a-7ea8-446b-a812-68e7bed229dc">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="defa0fe2-01cb-4a85-9270-b0f087507fab">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>country</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="c2443fc5-9eff-4f74-8852-a298d81cb443">
+      <ID>Phone Number</ID>
+      <Name>Phone Number</Name>
+      <EstimatedCount>103</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="75f0417c-3f91-4fa5-a712-d4a0917dc8d1">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e4067dea-28bd-4b7d-b313-9a3c32315cd6">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>phone_number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>List</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="21522a06-314d-422b-8349-58d0844774c6">
+      <ID>Web Site</ID>
+      <Name>Web Site</Name>
+      <EstimatedCount>96</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b9d1c0fa-a56b-4fca-b00c-b9bf69dfa38d">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1c9e58f8-4396-4645-b83a-823649c266c9">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>web_site</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="29c6d6ae-8690-4b41-b871-30aca6241733">
+      <ID>Region</ID>
+      <Name>Region</Name>
+      <EstimatedCount>12</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8c7816c5-94e9-402d-8968-92cce19deab0">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4df18647-9a8d-4de9-b95d-de4ab8f620da">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>region</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="7f2ccfcc-0bd0-4be8-bae2-0b83a1d8faaf">
+      <ID>Prior Region</ID>
+      <Name>Prior Region</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="edeff6c1-36e2-45be-8a00-dba3d99181ba">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="261eab7d-02bb-4c5e-9274-0b5d9ceea031">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>prior_region</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="12c85190-20fd-43a6-afe2-fc0bb85c7b1a">
+      <ID>Prior Region Date</ID>
+      <Name>Prior Region Date</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9baf1aea-91bf-4d11-afd1-1b4206536a72">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="29535edb-88b3-4d4f-afc6-5ba932388496">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>prior_region_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="a9024af9-004e-4ae7-b7f3-13b6d2f95f01">
+      <ID>Division</ID>
+      <Name>Division</Name>
+      <EstimatedCount>4</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="262c7a13-2611-4383-b4d7-9bd7342717d2">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="229ec833-8f93-4f2b-8524-6ee436f58b70">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>division</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="6dcfa644-08f5-4249-84ce-ecf5c6598a6d">
+      <ID>Prior Division</ID>
+      <Name>Prior Division</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ef374e70-5890-4bbf-a06c-359595d9d09f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9bc0f9fb-d8af-4e91-9ce4-8d0517813589">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>prior_division</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="c99ec92d-5eb1-4881-bf59-c6910203cdaa">
+      <ID>Prior Division Date</ID>
+      <Name>Prior Division Date</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="93175a2e-0226-47db-9bc3-7d152aed5166">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1dfc9e66-088d-4d83-bcd1-8381b77ef014">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>prior_division_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="19e3f9c0-639e-4d1a-ae06-6032597b9e88">
+      <ID>Source System Code</ID>
+      <Name>Source System Code</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ca800338-8de0-4b63-b504-45d04f549b78">
+          <DataType>UnsignedTinyInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fd4d8da2-7238-416a-a684-9d53f71e1871">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>source_system_code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="0ad20754-ae3b-4613-8d11-6e1344489840">
+      <ID>Create Timestamp</ID>
+      <Name>Create Timestamp</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e1d54425-edc1-4286-89fc-f3e1c2256650">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bb73f220-e2e5-4437-bf54-78391db55cf1">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>create_timestamp</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="87c6115c-47a2-4c90-b20b-f93b42bab9cf">
+      <ID>Update Timestamp</ID>
+      <Name>Update Timestamp</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0d1aceaf-3a25-449b-9588-899b2700e6ae">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="18f08d1d-7b56-4da1-a103-04e7ccbe03dd">
+            <TableID>dbo_dim_store</TableID>
+            <ColumnID>update_timestamp</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="35ebfadd-e39d-46af-8923-e5925dc983a5">
+      <ID>Division - Region</ID>
+      <Name>Division - Region</Name>
+      <Levels>
+        <Level dwd:design-time-name="323ff724-3671-4819-bb3e-88be074ea389">
+          <ID>Division</ID>
+          <Name>Division</Name>
+          <SourceAttributeID>Division</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="a9e11107-0b85-4542-8acb-b696c5295480">
+          <ID>Region</ID>
+          <Name>Region</Name>
+          <SourceAttributeID>Region</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="3776bde4-2189-4772-97f4-db738ff3c570">
+          <ID>Dim Store</ID>
+          <Name>Dim Store</Name>
+          <SourceAttributeID>Dim Store</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

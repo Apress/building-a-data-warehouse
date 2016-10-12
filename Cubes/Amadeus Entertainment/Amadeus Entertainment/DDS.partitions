@@ -1,0 +1,25 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d760ca8c-fef3-49c8-aaaa-cebcac4cec2e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DDS</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Product Sales</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="2e2f7768-ba7f-4938-b638-6ec14edf6b5a">
+          <ID>Fact Product Sales</ID>
+          <Name>Fact Product Sales</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1130fa11-94b3-4b94-9640-3d4dcc30c8fc">
+            <DataSourceViewID>DDS</DataSourceViewID>
+            <TableID>dbo_fact_product_sales</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

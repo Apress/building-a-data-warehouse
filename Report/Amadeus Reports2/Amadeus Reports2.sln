@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Amadeus Reports", "Amadeus Reports2\Amadeus Reports.rptproj", "{572DDD25-0A09-4E58-9621-F3362D0F12A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{572DDD25-0A09-4E58-9621-F3362D0F12A6}.Debug|Default.ActiveCfg = Debug
+		{572DDD25-0A09-4E58-9621-F3362D0F12A6}.Debug|Default.Build.0 = DebugLocal
+		{572DDD25-0A09-4E58-9621-F3362D0F12A6}.Debug|Default.Deploy.0 = DebugLocal
+		{572DDD25-0A09-4E58-9621-F3362D0F12A6}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{572DDD25-0A09-4E58-9621-F3362D0F12A6}.DebugLocal|Default.Build.0 = DebugLocal
+		{572DDD25-0A09-4E58-9621-F3362D0F12A6}.Production|Default.ActiveCfg = Production
+		{572DDD25-0A09-4E58-9621-F3362D0F12A6}.Production|Default.Build.0 = Production
+		{572DDD25-0A09-4E58-9621-F3362D0F12A6}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

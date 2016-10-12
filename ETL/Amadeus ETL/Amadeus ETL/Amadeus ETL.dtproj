@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProductVersion>9.0.1399.0</ProductVersion>
+  <SchemaVersion>9.0.1.0</SchemaVersion>
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmR3ZD0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9EYXRhV2FyZWhvdXNlL0Rlc2lnbmVyLzEuMCI+DQogIDxFbmFibGVkPmZhbHNlPC9FbmFibGVkPg0KICA8UHJvamVjdE5hbWU+PC9Qcm9qZWN0TmFtZT4NCiAgPEF1eFBhdGg+PC9BdXhQYXRoPg0KICA8TG9jYWxQYXRoPjwvTG9jYWxQYXRoPg0KICA8UHJvdmlkZXI+PC9Qcm92aWRlcj4NCjwvU291cmNlQ29udHJvbEluZm8+</State>
+  <Database>
+    <Name>Amadeus ETL.database</Name>
+    <FullPath>Amadeus ETL.database</FullPath>
+  </Database>
+  <Cubes />
+  <Dimensions />
+  <DataSources>
+    <ProjectItem>
+      <Name>Jade.ds</Name>
+      <FullPath>Jade.ds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Stage.ds</Name>
+      <FullPath>Stage.ds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Meta.ds</Name>
+      <FullPath>Meta.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews />
+  <MiningModels />
+  <Roles />
+  <Miscellaneous />
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Jade</Id>
+            <Name>Jade</Name>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=viva2;Persist Security Info=True;Password=;User ID=;Initial Catalog=Jade</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Stage</Id>
+            <Name>Stage</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI.1;Data Source=viva2;Persist Security Info=True;Password=;User ID=;Initial Catalog=Stage</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Meta</Id>
+            <Name>Meta</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI.1;Data Source=viva2;Persist Security Info=True;Password=;User ID=;Initial Catalog=Meta</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Jade</Id>
+            <Name>Jade</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Stage</Id>
+            <Name>Stage</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Meta</Id>
+            <Name>Meta</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
+    </Configuration>
+  </Configurations>
+  <DTSPackages>
+    <DtsPackage>
+      <Name>Stage weekly external data.dtsx</Name>
+      <FullPath>Stage weekly external data.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>Stage daily incremental.dtsx</Name>
+      <FullPath>Stage daily incremental.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>Stage monthly incremental.dtsx</Name>
+      <FullPath>Stage monthly incremental.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>Stage adhoc full reload.dtsx</Name>
+      <FullPath>Stage adhoc full reload.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>NDS store.dtsx</Name>
+      <FullPath>NDS store.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>NDS state.dtsx</Name>
+      <FullPath>NDS state.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>NDS country using SCD.dtsx</Name>
+      <FullPath>NDS country using SCD.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>NDS country using SQL.dtsx</Name>
+      <FullPath>NDS country using SQL.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>NDS country using lookup.dtsx</Name>
+      <FullPath>NDS country using lookup.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>NDS division.dtsx</Name>
+      <FullPath>NDS division.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>NDS region.dtsx</Name>
+      <FullPath>NDS region.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>NDS customer.dtsx</Name>
+      <FullPath>NDS Customer.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>DDS customer.dtsx</Name>
+      <FullPath>DDS customer.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>Stage daily full reload.dtsx</Name>
+      <FullPath>Stage daily full reload.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>NDS product.dtsx</Name>
+      <FullPath>NDS product.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>NDS artist.dtsx</Name>
+      <FullPath>NDS artist.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>DDS store.dtsx</Name>
+      <FullPath>DDS store.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>DDS product.dtsx</Name>
+      <FullPath>DDS product.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>NDS order.dtsx</Name>
+      <FullPath>NDS order.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>DDS fact_product_sales.dtsx</Name>
+      <FullPath>DDS fact_product_sales.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>Process cubes.dtsx</Name>
+      <FullPath>Process cubes.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+  </DTSPackages>
+</Project>

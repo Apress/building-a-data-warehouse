@@ -1,0 +1,41 @@
+﻿<ConfigurationSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Database>
+    <DataSources>
+      <DataSource>
+        <ID>DDS</ID>
+        <ConnectionString>Provider=SQLNCLI.1;Data Source=viva2;Persist Security Info=True;Password=;User ID=;Initial Catalog=DDS</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode>Default</ImpersonationMode>
+          <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+    </DataSources>
+    <Dimensions>
+      <Dimension>
+        <ID>Dim Date</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Product</ID>
+      </Dimension>
+    </Dimensions>
+    <Cubes>
+      <Cube>
+        <ID>DDS</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Product Sales</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Product Sales</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+    </Cubes>
+    <DataSourceImpersonationInfo>
+      <ImpersonationMode>Default</ImpersonationMode>
+      <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+    </DataSourceImpersonationInfo>
+  </Database>
+</ConfigurationSettings>

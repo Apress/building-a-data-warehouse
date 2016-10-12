@@ -1,0 +1,348 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="cc9178f6-fcdd-4360-80d6-3d152b90f817" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Product</ID>
+  <Name>Dim Product</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="d3b93232-b815-49d5-9f32-8b6ffa68c844">
+    <DataSourceViewID>DDS</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="c3f08c4b-02e7-45cb-88e1-a1188751fdc1">
+      <ID>Dim Product</ID>
+      <Name>Dim Product</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9180d21d-b8c6-45b1-bc4d-1f2989ddfdde">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4e63f48d-4f6b-42f9-aa3d-dce62c4009d6">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>product_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="a02fd233-aa1b-494f-b0b9-a960e6237325">
+          <AttributeID>Product Code</AttributeID>
+          <Name>Product Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="614b3fea-e8d3-4ce0-87b1-db5ae2358e2b">
+          <AttributeID>Name</AttributeID>
+          <Name>Name_</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="23a22344-4362-4dde-88cc-7eb79ed86537">
+          <AttributeID>Description</AttributeID>
+          <Name>Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="86fc693a-1282-47f6-b449-5f9d4907b2bd">
+          <AttributeID>Title</AttributeID>
+          <Name>Title</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6881e05f-4d43-4523-9103-434b945717d7">
+          <AttributeID>Artist</AttributeID>
+          <Name>Artist</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="85c1ed3b-da7f-4185-b823-d015b28a9c12">
+          <AttributeID>Product Type</AttributeID>
+          <Name>Product Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e66ec2eb-60a0-4c69-908e-b7d49b9085e9">
+          <AttributeID>Product Category</AttributeID>
+          <Name>Product Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="af47f43f-a8b4-45f1-8536-fbf1ccd59725">
+          <AttributeID>Format</AttributeID>
+          <Name>Format</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6bed6001-573a-4913-85d6-41868a0ed82f">
+          <AttributeID>Media</AttributeID>
+          <Name>Media</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e2383e5b-58fa-4ea5-9f42-33dbc8418b77">
+          <AttributeID>Unit Price</AttributeID>
+          <Name>Unit Price</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ee8612b5-cadf-4b07-b458-cfcd6e4a65fe">
+          <AttributeID>Unit Cost</AttributeID>
+          <Name>Unit Cost</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="99e01976-6d2c-4b1e-942d-ccbd2028f8d4">
+          <AttributeID>Status</AttributeID>
+          <Name>Status</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6926298c-894f-4511-960d-a536c0f503c9">
+          <AttributeID>Source System Code</AttributeID>
+          <Name>Source System Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ff6735fe-cbb7-4a2d-99be-d052a1283f50">
+          <AttributeID>Create Timestamp</AttributeID>
+          <Name>Create Timestamp</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="34508ef6-2057-4dbd-8b3b-94f826ee3262">
+          <AttributeID>Update Timestamp</AttributeID>
+          <Name>Update Timestamp</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="934d6e34-7484-404a-9435-1f9c0663b307">
+      <ID>Product Code</ID>
+      <Name>Product Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1cfa2b09-0706-4226-91d2-20a0aaa0c112">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f3e4dd8-9b76-4301-a609-81ff76b48cb8">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>product_code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="9f99e883-0a68-4f3f-8c53-c3f8742ab7e5">
+      <ID>Name</ID>
+      <Name>Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ed69ded7-8440-46c7-9edb-1c35f554a800">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cfef6628-b7f3-4340-83e6-da6d94c9558e">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="4d77b3d6-c868-431d-867f-2698ccc50df7">
+      <ID>Description</ID>
+      <Name>Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="88bf314e-f1c5-41b0-93bb-2ab7664ededc">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="99324c4a-9d66-4e33-ac17-13e44c3efc29">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="72764130-23ca-47d7-abef-3b9d4f3f84c4">
+      <ID>Title</ID>
+      <Name>Title</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d493af1e-1707-4312-9454-798d4eb6590f">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e9ba8ee3-3bdf-40d8-93c6-05627a4044f4">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>title</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="f00dbb0e-0f74-44e2-90c2-475ef7c8ad32">
+      <ID>Artist</ID>
+      <Name>Artist</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e101ee65-027c-444e-aba4-4d78816490aa">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a5d233bf-7af8-4684-8edb-24eb053d1d51">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>artist</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="fd9d5639-aef7-4546-b66a-d3aa8b01629c">
+      <ID>Product Type</ID>
+      <Name>Product Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bff3ef9c-7550-4fa3-a8a3-4da2144f0ccf">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2bfa9c10-3942-4a34-a344-9efdbac98692">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>product_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="ca318bd8-84ae-4162-976f-38bc43ac2d03">
+      <ID>Product Category</ID>
+      <Name>Product Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8f73acfe-0a96-4b14-b322-19e02cfc80db">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c234f005-628f-448a-8910-33a58e0d0e4d">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>product_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="beaa6064-42bc-49b5-85d1-fecbbe8c595e">
+      <ID>Format</ID>
+      <Name>Format</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="32f88c66-dc82-4b82-8d0c-98bd02c490f6">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8ced48b9-7ed7-4e28-8486-61989a1a9791">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>format</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="67711796-4ce3-4f3b-ae8a-d2ce61220546">
+      <ID>Media</ID>
+      <Name>Media</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d0d4cbae-653c-4477-b485-20e04cf47425">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c99cb52b-43a0-487a-9fe4-7165a605b8f2">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>media</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="9e024e5f-332e-4cff-9138-2271ff84df26">
+      <ID>Unit Price</ID>
+      <Name>Unit Price</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="97979be6-e2ea-4974-857b-41e55d0c0233">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c80488e2-db2f-4c56-ac7a-f7e7918e7196">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>unit_price</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="c5994b9c-381f-4576-9f49-50ec0800e162">
+      <ID>Unit Cost</ID>
+      <Name>Unit Cost</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="de062cb1-3799-4327-bccc-f2735051038c">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3154727e-f75a-4687-b389-346273e78db5">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>unit_cost</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="71a09816-97b0-4341-9d47-73174127872f">
+      <ID>Status</ID>
+      <Name>Status</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9161ef87-79c7-4a0f-9c2a-389a1bbc000f">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7788301b-c817-46f3-babc-402f03e699e6">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>status</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="8d749c99-3ca7-4ac8-9168-b9d731324a8d">
+      <ID>Source System Code</ID>
+      <Name>Source System Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="02dea366-577a-44bb-9b1b-0f836be19602">
+          <DataType>UnsignedTinyInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="37616fdd-a4b2-4c77-b3f6-3a3b86bf8261">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>source_system_code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="f82ccb28-d0b0-4da4-b9ef-384ccd040658">
+      <ID>Create Timestamp</ID>
+      <Name>Create Timestamp</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3ccf80fd-b29f-4fa4-a0ab-410dfd59ef58">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="89909239-dd92-4fb1-a44c-d28669c83d48">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>create_timestamp</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="103c84c7-163e-4534-bf69-eff37ccdeaed">
+      <ID>Update Timestamp</ID>
+      <Name>Update Timestamp</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7d4bf4c6-efe1-4c0f-8864-26e028805eaf">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f6e7ffe7-a727-4876-b918-1a4572bef28d">
+            <TableID>dbo_dim_product</TableID>
+            <ColumnID>update_timestamp</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+  </Attributes>
+</Dimension>
